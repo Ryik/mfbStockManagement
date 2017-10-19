@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var BarrCodeText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,9 +23,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func updateDecoderUI(_ notification: Notification) {
+    @objc func updateDecoderUI(_ notification: Notification) {
         if notification.object != nil && (notification.object is String) {
-            scanresult.text = notification.object
+            BarrCodeText.text = notification.object as? String
         }
     }
 

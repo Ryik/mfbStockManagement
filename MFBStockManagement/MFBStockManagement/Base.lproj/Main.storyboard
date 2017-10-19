@@ -34,6 +34,9 @@
                         <color key="tintColor" red="0.87850138749999995" green="0.47441810569999998" blue="0.2333973791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="BarrCodeText" destination="UUm-jK-AVK" id="FOT-NB-7Zc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,9 @@
 		2A2EB29C1F98956700F9DD43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2EB29A1F98956700F9DD43 /* LaunchScreen.storyboard */; };
 		2A2EB2A71F98956800F9DD43 /* MFBStockManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2A61F98956800F9DD43 /* MFBStockManagementTests.swift */; };
 		2A2EB2B21F98956800F9DD43 /* MFBStockManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2B11F98956800F9DD43 /* MFBStockManagementUITests.swift */; };
+		2A2EB2C71F98995C00F9DD43 /* coreCaptuvo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2C51F98995C00F9DD43 /* coreCaptuvo.swift */; };
+		2A2EB2C81F98995C00F9DD43 /* ConstDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2C61F98995C00F9DD43 /* ConstDefine.swift */; };
+		2A2EB2CA1F98997700F9DD43 /* libCaptuvoSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2EB2C31F98992400F9DD43 /* libCaptuvoSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,11 @@
 		2A2EB2AD1F98956800F9DD43 /* MFBStockManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MFBStockManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A2EB2B11F98956800F9DD43 /* MFBStockManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFBStockManagementUITests.swift; sourceTree = "<group>"; };
 		2A2EB2B31F98956800F9DD43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A2EB2C21F98991D00F9DD43 /* Captuvo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Captuvo.h; sourceTree = "<group>"; };
+		2A2EB2C31F98992400F9DD43 /* libCaptuvoSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCaptuvoSDK.a; sourceTree = "<group>"; };
+		2A2EB2C51F98995C00F9DD43 /* coreCaptuvo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coreCaptuvo.swift; sourceTree = "<group>"; };
+		2A2EB2C61F98995C00F9DD43 /* ConstDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstDefine.swift; sourceTree = "<group>"; };
+		2A2EB2CB1F98999700F9DD43 /* MFBStockManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFBStockManagement-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2EB2CA1F98997700F9DD43 /* libCaptuvoSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 				2A2EB2A51F98956800F9DD43 /* MFBStockManagementTests */,
 				2A2EB2B01F98956800F9DD43 /* MFBStockManagementUITests */,
 				2A2EB28F1F98956700F9DD43 /* Products */,
+				2A2EB2C91F98997700F9DD43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +107,7 @@
 		2A2EB2901F98956700F9DD43 /* MFBStockManagement */ = {
 			isa = PBXGroup;
 			children = (
+				2A2EB2BF1F9898DE00F9DD43 /* Captuvo */,
 				2A2EB2911F98956700F9DD43 /* AppDelegate.swift */,
 				2A2EB2931F98956700F9DD43 /* ViewController.swift */,
 				2A2EB2951F98956700F9DD43 /* Main.storyboard */,
@@ -123,6 +134,41 @@
 				2A2EB2B31F98956800F9DD43 /* Info.plist */,
 			);
 			path = MFBStockManagementUITests;
+			sourceTree = "<group>";
+		};
+		2A2EB2BF1F9898DE00F9DD43 /* Captuvo */ = {
+			isa = PBXGroup;
+			children = (
+				2A2EB2C61F98995C00F9DD43 /* ConstDefine.swift */,
+				2A2EB2C51F98995C00F9DD43 /* coreCaptuvo.swift */,
+				2A2EB2C11F9898EC00F9DD43 /* Include */,
+				2A2EB2C01F9898E800F9DD43 /* LIb */,
+			);
+			path = Captuvo;
+			sourceTree = "<group>";
+		};
+		2A2EB2C01F9898E800F9DD43 /* LIb */ = {
+			isa = PBXGroup;
+			children = (
+				2A2EB2C31F98992400F9DD43 /* libCaptuvoSDK.a */,
+			);
+			path = LIb;
+			sourceTree = "<group>";
+		};
+		2A2EB2C11F9898EC00F9DD43 /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				2A2EB2C21F98991D00F9DD43 /* Captuvo.h */,
+				2A2EB2CB1F98999700F9DD43 /* MFBStockManagement-Bridging-Header.h */,
+			);
+			path = Include;
+			sourceTree = "<group>";
+		};
+		2A2EB2C91F98997700F9DD43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +239,7 @@
 				TargetAttributes = {
 					2A2EB28D1F98956700F9DD43 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					2A2EB2A11F98956800F9DD43 = {
@@ -259,7 +306,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2EB2C71F98995C00F9DD43 /* coreCaptuvo.swift in Sources */,
 				2A2EB2941F98956700F9DD43 /* ViewController.swift in Sources */,
+				2A2EB2C81F98995C00F9DD43 /* ConstDefine.swift in Sources */,
 				2A2EB2921F98956700F9DD43 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,11 +475,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MFBStockManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MFBStockManagement/Captuvo/LIb",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = MFB.MFBStockManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MFBStockManagement/Captuvo/Include/MFBStockManagement-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,11 +496,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MFBStockManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MFBStockManagement/Captuvo/LIb",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = MFB.MFBStockManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MFBStockManagement/Captuvo/Include/MFBStockManagement-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var BarrCodeText: UILabel!
@@ -16,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateDecoderUI), name: NSNotification.Name(rawValue: DECODER_DATA_RECEIVED_VC), object: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +30,8 @@ class ViewController: UIViewController {
         if notification.object != nil && (notification.object is String) {
             BarrCodeText.text = notification.object as? String
         }
+        BarrCodeText.text = "Coucou"
+        print("updaterUI")
     }
 
 }

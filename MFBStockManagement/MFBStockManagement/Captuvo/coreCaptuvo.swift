@@ -29,17 +29,20 @@ class coreCaptuvo : NSObject, CaptuvoEventsProtocol {
         Captuvo.sharedCaptuvoDevice().startDecoderHardware()
         Captuvo.sharedCaptuvoDevice().startMSRHardware()
         Captuvo.sharedCaptuvoDevice().startPMHardware()
+        print("StartHardware")
     }
     
     func stopHardware() {
         Captuvo.sharedCaptuvoDevice().stopDecoderHardware()
         Captuvo.sharedCaptuvoDevice().stopMSRHardware()
         Captuvo.sharedCaptuvoDevice().stopPMHardware()
+        print("StopHardware")
     }
     
     // MARK: ----decoder data received-------
     func decoderDataReceived(_ data: String) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: DECODER_DATA_RECEIVED_VC), object: data)
+        
     }
     
     // MARK: ----msr data received-------

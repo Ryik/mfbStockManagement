@@ -11,11 +11,7 @@ class coreCaptuvo : NSObject, CaptuvoEventsProtocol {
     static var sharedCaptuvocore: coreCaptuvo? = nil
     
     class func sharedCaptuvoCore() -> coreCaptuvo {
-        if nil != sharedCaptuvocore {
             return sharedCaptuvocore ?? coreCaptuvo()
-        }
-        sharedCaptuvocore = coreCaptuvo()
-        return sharedCaptuvocore ?? coreCaptuvo()
     }
     
     override init() {
@@ -42,12 +38,16 @@ class coreCaptuvo : NSObject, CaptuvoEventsProtocol {
     // MARK: ----decoder data received-------
     func decoderDataReceived(_ data: String) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: DECODER_DATA_RECEIVED_VC), object: data)
+        print("data : ")
+        print(data)
         
     }
     
     // MARK: ----msr data received-------
     func msrStringDataReceived(_ data: String, validData status: Bool) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: MSR_DATA_RECEIVED_VC), object: data)
+        print("data2 : ")
+        print(data)
     }
     
     // MARK: ----pm data received-------

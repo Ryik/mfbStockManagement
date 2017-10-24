@@ -32,7 +32,7 @@ static coreCaptuvo *sharedCaptuvocore = nil;
     [[Captuvo sharedCaptuvoDevice] startDecoderHardware] ;
     [[Captuvo sharedCaptuvoDevice] startMSRHardware] ;
     [[Captuvo sharedCaptuvoDevice] startPMHardware] ;
-    printf("\n startHardware \n");
+    printf("\n  startHardware\n");
 }
 
 - (void)stopHardware{

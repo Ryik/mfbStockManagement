@@ -6,6 +6,7 @@
 
 #import <UIKit/UIKit.h>
 #import <ExternalAccessory/ExternalAccessory.h>
+#import "ConstDefine.h"
 
 #define HONEYWELL_DEPRECATED_CAPTUVO(Captuvo_version) __attribute__((deprecated)) //_Captuvo_version Captuvo sled product version.
 
@@ -2367,7 +2368,7 @@ typedef enum {
 /**
  @brief This method requests the current engine serial number.
  
- When this method is called to request the engine serial number of the device. 
+ When this method is called to request the engine serial number of the device.
  */
 
 - (void)requestEngineSerialNumber;
@@ -2683,7 +2684,7 @@ typedef enum {
  
  The timeout value must >=30seconds and<65535seconds when user setting.
  
- When this method is called to set the current HID setting timeout. It set successed or failed will post to user through the method<em>- (void)responseHIDChangedDetail:(NSString*)changedInfo ;</em> delegate method. 
+ When this method is called to set the current HID setting timeout. It set successed or failed will post to user through the method<em>- (void)responseHIDChangedDetail:(NSString*)changedInfo ;</em> delegate method.
  To enable the HID mode and set timeout value to sled, it will save sled's battery when user hasn't any action in timeout value time, it will automatic enter into save power mode(Close decoder).
  */
 - (void)setHIDTimeout:(int)timeout ;
@@ -2802,3 +2803,4 @@ CupertinoSDK provide this method for user to control the Cupertino battery charg
 #pragma end
 
 @end
+

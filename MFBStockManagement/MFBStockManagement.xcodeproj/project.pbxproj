@@ -17,6 +17,7 @@
 		2A2EB2B21F98956800F9DD43 /* MFBStockManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2B11F98956800F9DD43 /* MFBStockManagementUITests.swift */; };
 		2A2EB2C71F98995C00F9DD43 /* coreCaptuvo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2C51F98995C00F9DD43 /* coreCaptuvo.swift */; };
 		2A2EB2C81F98995C00F9DD43 /* ConstDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2C61F98995C00F9DD43 /* ConstDefine.swift */; };
+		2AFCEB791F9F2A0000E3DA0E /* coreCaptuvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFCEB751F9F2A0000E3DA0E /* coreCaptuvo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +51,14 @@
 		2A2EB2AD1F98956800F9DD43 /* MFBStockManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MFBStockManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A2EB2B11F98956800F9DD43 /* MFBStockManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFBStockManagementUITests.swift; sourceTree = "<group>"; };
 		2A2EB2B31F98956800F9DD43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A2EB2C21F98991D00F9DD43 /* Captuvo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Captuvo.h; sourceTree = "<group>"; };
 		2A2EB2C31F98992400F9DD43 /* libCaptuvoSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCaptuvoSDK.a; sourceTree = "<group>"; };
 		2A2EB2C51F98995C00F9DD43 /* coreCaptuvo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coreCaptuvo.swift; sourceTree = "<group>"; };
 		2A2EB2C61F98995C00F9DD43 /* ConstDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstDefine.swift; sourceTree = "<group>"; };
 		2A2EB2CB1F98999700F9DD43 /* MFBStockManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFBStockManagement-Bridging-Header.h"; sourceTree = "<group>"; };
+		2AFCEB751F9F2A0000E3DA0E /* coreCaptuvo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coreCaptuvo.m; sourceTree = "<group>"; };
+		2AFCEB761F9F2A0000E3DA0E /* coreCaptuvo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coreCaptuvo.h; sourceTree = "<group>"; };
+		2AFCEB771F9F2A0000E3DA0E /* ConstDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstDefine.h; sourceTree = "<group>"; };
+		2AFCEB781F9F2A0000E3DA0E /* Captuvo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Captuvo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +162,10 @@
 		2A2EB2C11F9898EC00F9DD43 /* Include */ = {
 			isa = PBXGroup;
 			children = (
-				2A2EB2C21F98991D00F9DD43 /* Captuvo.h */,
+				2AFCEB781F9F2A0000E3DA0E /* Captuvo.h */,
+				2AFCEB771F9F2A0000E3DA0E /* ConstDefine.h */,
+				2AFCEB761F9F2A0000E3DA0E /* coreCaptuvo.h */,
+				2AFCEB751F9F2A0000E3DA0E /* coreCaptuvo.m */,
 				2A2EB2CB1F98999700F9DD43 /* MFBStockManagement-Bridging-Header.h */,
 			);
 			path = Include;
@@ -309,6 +316,7 @@
 				2A2EB2C71F98995C00F9DD43 /* coreCaptuvo.swift in Sources */,
 				2A2EB2941F98956700F9DD43 /* ViewController.swift in Sources */,
 				2A2EB2C81F98995C00F9DD43 /* ConstDefine.swift in Sources */,
+				2AFCEB791F9F2A0000E3DA0E /* coreCaptuvo.m in Sources */,
 				2A2EB2921F98956700F9DD43 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

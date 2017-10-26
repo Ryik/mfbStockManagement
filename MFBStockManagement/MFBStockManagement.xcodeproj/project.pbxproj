@@ -26,6 +26,7 @@
 		2A27B63A1FA1CD4500CE9810 /* libCaptuvoSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCaptuvoSDK.a; sourceTree = "<group>"; };
 		2A27B63C1FA1CD4D00CE9810 /* Captuvo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Captuvo.h; sourceTree = "<group>"; };
 		2A27B63D1FA1CDA400CE9810 /* MFBStockManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFBStockManagement-Bridging-Header.h"; sourceTree = "<group>"; };
+		2A27B6401FA1D0E900CE9810 /* MFBStockManagement.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = MFBStockManagement.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 		2A27B6191FA1CCD700CE9810 = {
 			isa = PBXGroup;
 			children = (
+				2A27B6401FA1D0E900CE9810 /* MFBStockManagement.sh */,
 				2A27B6371FA1CCF900CE9810 /* Captuvo */,
 				2A27B6241FA1CCD700CE9810 /* MFBStockManagement */,
 				2A27B6231FA1CCD700CE9810 /* Products */,

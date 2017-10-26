@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  SwiftSample
+//  MFBStockManagement
 //
-//  Created by zhou shadow on 5/6/15.
-//  Copyright (c) 2015 Honeywell Inc. All rights reserved.
+//  Created by Gabriel Morin on 26/10/2017.
+//  Copyright © 2017 MFB. All rights reserved.
 //
 
 import UIKit

@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController,CaptuvoEventsProtocol{
     
-    @IBOutlet weak var barcodelbl:UILabel!
+    @IBOutlet weak var barcodelbl: UILabel!
     @IBOutlet weak var msrlbl:UILabel!
     @IBOutlet weak var versionlbl:UILabel!
     @IBOutlet weak var batterlbl:UILabel!
@@ -74,7 +74,6 @@ class ViewController: UIViewController,CaptuvoEventsProtocol{
     }
     
     func captuvoConnected(){
-        
         Captuvo.sharedCaptuvoDevice().startDecoderHardware()
         Captuvo.sharedCaptuvoDevice().startMSRHardware()
         Captuvo.sharedCaptuvoDevice().startPMHardware()

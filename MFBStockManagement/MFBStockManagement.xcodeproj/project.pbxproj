@@ -7,187 +7,105 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A059A691F99DB770004179B /* libCaptuvoSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2EB2C31F98992400F9DD43 /* libCaptuvoSDK.a */; };
-		2A2EB2921F98956700F9DD43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2911F98956700F9DD43 /* AppDelegate.swift */; };
-		2A2EB2941F98956700F9DD43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2931F98956700F9DD43 /* ViewController.swift */; };
-		2A2EB2971F98956700F9DD43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2EB2951F98956700F9DD43 /* Main.storyboard */; };
-		2A2EB2991F98956700F9DD43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2EB2981F98956700F9DD43 /* Assets.xcassets */; };
-		2A2EB29C1F98956700F9DD43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2EB29A1F98956700F9DD43 /* LaunchScreen.storyboard */; };
-		2A2EB2A71F98956800F9DD43 /* MFBStockManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2A61F98956800F9DD43 /* MFBStockManagementTests.swift */; };
-		2A2EB2B21F98956800F9DD43 /* MFBStockManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2B11F98956800F9DD43 /* MFBStockManagementUITests.swift */; };
-		2A2EB2C71F98995C00F9DD43 /* coreCaptuvo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2C51F98995C00F9DD43 /* coreCaptuvo.swift */; };
-		2A2EB2C81F98995C00F9DD43 /* ConstDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB2C61F98995C00F9DD43 /* ConstDefine.swift */; };
-		2AFCEB791F9F2A0000E3DA0E /* coreCaptuvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFCEB751F9F2A0000E3DA0E /* coreCaptuvo.m */; };
+		2A27B6261FA1CCD700CE9810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A27B6251FA1CCD700CE9810 /* AppDelegate.swift */; };
+		2A27B6281FA1CCD700CE9810 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A27B6271FA1CCD700CE9810 /* ViewController.swift */; };
+		2A27B62B1FA1CCD700CE9810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A27B6291FA1CCD700CE9810 /* Main.storyboard */; };
+		2A27B62D1FA1CCD700CE9810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A27B62C1FA1CCD700CE9810 /* Assets.xcassets */; };
+		2A27B6301FA1CCD700CE9810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A27B62E1FA1CCD700CE9810 /* LaunchScreen.storyboard */; };
+		2A27B63B1FA1CD4500CE9810 /* libCaptuvoSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A27B63A1FA1CD4500CE9810 /* libCaptuvoSDK.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		2A2EB2A31F98956800F9DD43 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A2EB2861F98956700F9DD43 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2A2EB28D1F98956700F9DD43;
-			remoteInfo = MFBStockManagement;
-		};
-		2A2EB2AE1F98956800F9DD43 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A2EB2861F98956700F9DD43 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2A2EB28D1F98956700F9DD43;
-			remoteInfo = MFBStockManagement;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		2A2EB28E1F98956700F9DD43 /* MFBStockManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFBStockManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A2EB2911F98956700F9DD43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2A2EB2931F98956700F9DD43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2A2EB2961F98956700F9DD43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2A2EB2981F98956700F9DD43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2A2EB29B1F98956700F9DD43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2A2EB29D1F98956700F9DD43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A2EB2A21F98956800F9DD43 /* MFBStockManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MFBStockManagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A2EB2A61F98956800F9DD43 /* MFBStockManagementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFBStockManagementTests.swift; sourceTree = "<group>"; };
-		2A2EB2A81F98956800F9DD43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A2EB2AD1F98956800F9DD43 /* MFBStockManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MFBStockManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A2EB2B11F98956800F9DD43 /* MFBStockManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFBStockManagementUITests.swift; sourceTree = "<group>"; };
-		2A2EB2B31F98956800F9DD43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A2EB2C31F98992400F9DD43 /* libCaptuvoSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCaptuvoSDK.a; sourceTree = "<group>"; };
-		2A2EB2C51F98995C00F9DD43 /* coreCaptuvo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coreCaptuvo.swift; sourceTree = "<group>"; };
-		2A2EB2C61F98995C00F9DD43 /* ConstDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstDefine.swift; sourceTree = "<group>"; };
-		2A2EB2CB1F98999700F9DD43 /* MFBStockManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFBStockManagement-Bridging-Header.h"; sourceTree = "<group>"; };
-		2AFCEB751F9F2A0000E3DA0E /* coreCaptuvo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coreCaptuvo.m; sourceTree = "<group>"; };
-		2AFCEB761F9F2A0000E3DA0E /* coreCaptuvo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coreCaptuvo.h; sourceTree = "<group>"; };
-		2AFCEB771F9F2A0000E3DA0E /* ConstDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstDefine.h; sourceTree = "<group>"; };
-		2AFCEB781F9F2A0000E3DA0E /* Captuvo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Captuvo.h; sourceTree = "<group>"; };
+		2A27B6221FA1CCD700CE9810 /* MFBStockManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFBStockManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A27B6251FA1CCD700CE9810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2A27B6271FA1CCD700CE9810 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A27B62A1FA1CCD700CE9810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A27B62C1FA1CCD700CE9810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A27B62F1FA1CCD700CE9810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2A27B6311FA1CCD700CE9810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A27B63A1FA1CD4500CE9810 /* libCaptuvoSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCaptuvoSDK.a; sourceTree = "<group>"; };
+		2A27B63C1FA1CD4D00CE9810 /* Captuvo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Captuvo.h; sourceTree = "<group>"; };
+		2A27B63D1FA1CDA400CE9810 /* MFBStockManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFBStockManagement-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2A2EB28B1F98956700F9DD43 /* Frameworks */ = {
+		2A27B61F1FA1CCD700CE9810 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A059A691F99DB770004179B /* libCaptuvoSDK.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A2EB29F1F98956800F9DD43 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A2EB2AA1F98956800F9DD43 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				2A27B63B1FA1CD4500CE9810 /* libCaptuvoSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A2EB2851F98956700F9DD43 = {
+		2A27B6191FA1CCD700CE9810 = {
 			isa = PBXGroup;
 			children = (
-				2A2EB2901F98956700F9DD43 /* MFBStockManagement */,
-				2A2EB2A51F98956800F9DD43 /* MFBStockManagementTests */,
-				2A2EB2B01F98956800F9DD43 /* MFBStockManagementUITests */,
-				2A2EB28F1F98956700F9DD43 /* Products */,
-				2A2EB2C91F98997700F9DD43 /* Frameworks */,
+				2A27B6371FA1CCF900CE9810 /* Captuvo */,
+				2A27B6241FA1CCD700CE9810 /* MFBStockManagement */,
+				2A27B6231FA1CCD700CE9810 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2A2EB28F1F98956700F9DD43 /* Products */ = {
+		2A27B6231FA1CCD700CE9810 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A2EB28E1F98956700F9DD43 /* MFBStockManagement.app */,
-				2A2EB2A21F98956800F9DD43 /* MFBStockManagementTests.xctest */,
-				2A2EB2AD1F98956800F9DD43 /* MFBStockManagementUITests.xctest */,
+				2A27B6221FA1CCD700CE9810 /* MFBStockManagement.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2A2EB2901F98956700F9DD43 /* MFBStockManagement */ = {
+		2A27B6241FA1CCD700CE9810 /* MFBStockManagement */ = {
 			isa = PBXGroup;
 			children = (
-				2A2EB2BF1F9898DE00F9DD43 /* Captuvo */,
-				2A2EB2911F98956700F9DD43 /* AppDelegate.swift */,
-				2A2EB2931F98956700F9DD43 /* ViewController.swift */,
-				2A2EB2951F98956700F9DD43 /* Main.storyboard */,
-				2A2EB2981F98956700F9DD43 /* Assets.xcassets */,
-				2A2EB29A1F98956700F9DD43 /* LaunchScreen.storyboard */,
-				2A2EB29D1F98956700F9DD43 /* Info.plist */,
+				2A27B6251FA1CCD700CE9810 /* AppDelegate.swift */,
+				2A27B6271FA1CCD700CE9810 /* ViewController.swift */,
+				2A27B6291FA1CCD700CE9810 /* Main.storyboard */,
+				2A27B62C1FA1CCD700CE9810 /* Assets.xcassets */,
+				2A27B62E1FA1CCD700CE9810 /* LaunchScreen.storyboard */,
+				2A27B6311FA1CCD700CE9810 /* Info.plist */,
 			);
 			path = MFBStockManagement;
 			sourceTree = "<group>";
 		};
-		2A2EB2A51F98956800F9DD43 /* MFBStockManagementTests */ = {
+		2A27B6371FA1CCF900CE9810 /* Captuvo */ = {
 			isa = PBXGroup;
 			children = (
-				2A2EB2A61F98956800F9DD43 /* MFBStockManagementTests.swift */,
-				2A2EB2A81F98956800F9DD43 /* Info.plist */,
-			);
-			path = MFBStockManagementTests;
-			sourceTree = "<group>";
-		};
-		2A2EB2B01F98956800F9DD43 /* MFBStockManagementUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2A2EB2B11F98956800F9DD43 /* MFBStockManagementUITests.swift */,
-				2A2EB2B31F98956800F9DD43 /* Info.plist */,
-			);
-			path = MFBStockManagementUITests;
-			sourceTree = "<group>";
-		};
-		2A2EB2BF1F9898DE00F9DD43 /* Captuvo */ = {
-			isa = PBXGroup;
-			children = (
-				2A2EB2C61F98995C00F9DD43 /* ConstDefine.swift */,
-				2A2EB2C51F98995C00F9DD43 /* coreCaptuvo.swift */,
-				2A2EB2C11F9898EC00F9DD43 /* Include */,
-				2A2EB2C01F9898E800F9DD43 /* Lib */,
+				2A27B6391FA1CD0400CE9810 /* Lib */,
+				2A27B6381FA1CCFF00CE9810 /* Include */,
+				2A27B63D1FA1CDA400CE9810 /* MFBStockManagement-Bridging-Header.h */,
 			);
 			path = Captuvo;
 			sourceTree = "<group>";
 		};
-		2A2EB2C01F9898E800F9DD43 /* Lib */ = {
+		2A27B6381FA1CCFF00CE9810 /* Include */ = {
 			isa = PBXGroup;
 			children = (
-				2A2EB2C31F98992400F9DD43 /* libCaptuvoSDK.a */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		2A2EB2C11F9898EC00F9DD43 /* Include */ = {
-			isa = PBXGroup;
-			children = (
-				2AFCEB781F9F2A0000E3DA0E /* Captuvo.h */,
-				2AFCEB771F9F2A0000E3DA0E /* ConstDefine.h */,
-				2AFCEB761F9F2A0000E3DA0E /* coreCaptuvo.h */,
-				2AFCEB751F9F2A0000E3DA0E /* coreCaptuvo.m */,
-				2A2EB2CB1F98999700F9DD43 /* MFBStockManagement-Bridging-Header.h */,
+				2A27B63C1FA1CD4D00CE9810 /* Captuvo.h */,
 			);
 			path = Include;
 			sourceTree = "<group>";
 		};
-		2A2EB2C91F98997700F9DD43 /* Frameworks */ = {
+		2A27B6391FA1CD0400CE9810 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				2A27B63A1FA1CD4500CE9810 /* libCaptuvoSDK.a */,
 			);
-			name = Frameworks;
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2A2EB28D1F98956700F9DD43 /* MFBStockManagement */ = {
+		2A27B6211FA1CCD700CE9810 /* MFBStockManagement */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A2EB2B61F98956800F9DD43 /* Build configuration list for PBXNativeTarget "MFBStockManagement" */;
+			buildConfigurationList = 2A27B6341FA1CCD700CE9810 /* Build configuration list for PBXNativeTarget "MFBStockManagement" */;
 			buildPhases = (
-				2A2EB28A1F98956700F9DD43 /* Sources */,
-				2A2EB28B1F98956700F9DD43 /* Frameworks */,
-				2A2EB28C1F98956700F9DD43 /* Resources */,
+				2A27B61E1FA1CCD700CE9810 /* Sources */,
+				2A27B61F1FA1CCD700CE9810 /* Frameworks */,
+				2A27B6201FA1CCD700CE9810 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -195,73 +113,27 @@
 			);
 			name = MFBStockManagement;
 			productName = MFBStockManagement;
-			productReference = 2A2EB28E1F98956700F9DD43 /* MFBStockManagement.app */;
+			productReference = 2A27B6221FA1CCD700CE9810 /* MFBStockManagement.app */;
 			productType = "com.apple.product-type.application";
-		};
-		2A2EB2A11F98956800F9DD43 /* MFBStockManagementTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2A2EB2B91F98956800F9DD43 /* Build configuration list for PBXNativeTarget "MFBStockManagementTests" */;
-			buildPhases = (
-				2A2EB29E1F98956800F9DD43 /* Sources */,
-				2A2EB29F1F98956800F9DD43 /* Frameworks */,
-				2A2EB2A01F98956800F9DD43 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2A2EB2A41F98956800F9DD43 /* PBXTargetDependency */,
-			);
-			name = MFBStockManagementTests;
-			productName = MFBStockManagementTests;
-			productReference = 2A2EB2A21F98956800F9DD43 /* MFBStockManagementTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2A2EB2AC1F98956800F9DD43 /* MFBStockManagementUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2A2EB2BC1F98956800F9DD43 /* Build configuration list for PBXNativeTarget "MFBStockManagementUITests" */;
-			buildPhases = (
-				2A2EB2A91F98956800F9DD43 /* Sources */,
-				2A2EB2AA1F98956800F9DD43 /* Frameworks */,
-				2A2EB2AB1F98956800F9DD43 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2A2EB2AF1F98956800F9DD43 /* PBXTargetDependency */,
-			);
-			name = MFBStockManagementUITests;
-			productName = MFBStockManagementUITests;
-			productReference = 2A2EB2AD1F98956800F9DD43 /* MFBStockManagementUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2A2EB2861F98956700F9DD43 /* Project object */ = {
+		2A27B61A1FA1CCD700CE9810 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = MFB;
 				TargetAttributes = {
-					2A2EB28D1F98956700F9DD43 = {
-						CreatedOnToolsVersion = 9.0;
+					2A27B6211FA1CCD700CE9810 = {
+						CreatedOnToolsVersion = 9.0.1;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
-					2A2EB2A11F98956800F9DD43 = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 2A2EB28D1F98956700F9DD43;
-					};
-					2A2EB2AC1F98956800F9DD43 = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 2A2EB28D1F98956700F9DD43;
-					};
 				};
 			};
-			buildConfigurationList = 2A2EB2891F98956700F9DD43 /* Build configuration list for PBXProject "MFBStockManagement" */;
+			buildConfigurationList = 2A27B61D1FA1CCD700CE9810 /* Build configuration list for PBXProject "MFBStockManagement" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -269,102 +141,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 2A2EB2851F98956700F9DD43;
-			productRefGroup = 2A2EB28F1F98956700F9DD43 /* Products */;
+			mainGroup = 2A27B6191FA1CCD700CE9810;
+			productRefGroup = 2A27B6231FA1CCD700CE9810 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A2EB28D1F98956700F9DD43 /* MFBStockManagement */,
-				2A2EB2A11F98956800F9DD43 /* MFBStockManagementTests */,
-				2A2EB2AC1F98956800F9DD43 /* MFBStockManagementUITests */,
+				2A27B6211FA1CCD700CE9810 /* MFBStockManagement */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2A2EB28C1F98956700F9DD43 /* Resources */ = {
+		2A27B6201FA1CCD700CE9810 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A2EB29C1F98956700F9DD43 /* LaunchScreen.storyboard in Resources */,
-				2A2EB2991F98956700F9DD43 /* Assets.xcassets in Resources */,
-				2A2EB2971F98956700F9DD43 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A2EB2A01F98956800F9DD43 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A2EB2AB1F98956800F9DD43 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				2A27B6301FA1CCD700CE9810 /* LaunchScreen.storyboard in Resources */,
+				2A27B62D1FA1CCD700CE9810 /* Assets.xcassets in Resources */,
+				2A27B62B1FA1CCD700CE9810 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2A2EB28A1F98956700F9DD43 /* Sources */ = {
+		2A27B61E1FA1CCD700CE9810 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A2EB2C71F98995C00F9DD43 /* coreCaptuvo.swift in Sources */,
-				2A2EB2941F98956700F9DD43 /* ViewController.swift in Sources */,
-				2A2EB2C81F98995C00F9DD43 /* ConstDefine.swift in Sources */,
-				2AFCEB791F9F2A0000E3DA0E /* coreCaptuvo.m in Sources */,
-				2A2EB2921F98956700F9DD43 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A2EB29E1F98956800F9DD43 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A2EB2A71F98956800F9DD43 /* MFBStockManagementTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A2EB2A91F98956800F9DD43 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A2EB2B21F98956800F9DD43 /* MFBStockManagementUITests.swift in Sources */,
+				2A27B6281FA1CCD700CE9810 /* ViewController.swift in Sources */,
+				2A27B6261FA1CCD700CE9810 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		2A2EB2A41F98956800F9DD43 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2A2EB28D1F98956700F9DD43 /* MFBStockManagement */;
-			targetProxy = 2A2EB2A31F98956800F9DD43 /* PBXContainerItemProxy */;
-		};
-		2A2EB2AF1F98956800F9DD43 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2A2EB28D1F98956700F9DD43 /* MFBStockManagement */;
-			targetProxy = 2A2EB2AE1F98956800F9DD43 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		2A2EB2951F98956700F9DD43 /* Main.storyboard */ = {
+		2A27B6291FA1CCD700CE9810 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2A2EB2961F98956700F9DD43 /* Base */,
+				2A27B62A1FA1CCD700CE9810 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2A2EB29A1F98956700F9DD43 /* LaunchScreen.storyboard */ = {
+		2A27B62E1FA1CCD700CE9810 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2A2EB29B1F98956700F9DD43 /* Base */,
+				2A27B62F1FA1CCD700CE9810 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -372,7 +196,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2A2EB2B41F98956800F9DD43 /* Debug */ = {
+		2A27B6321FA1CCD700CE9810 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -429,7 +253,7 @@
 			};
 			name = Debug;
 		};
-		2A2EB2B51F98956800F9DD43 /* Release */ = {
+		2A27B6331FA1CCD700CE9810 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -479,7 +303,7 @@
 			};
 			name = Release;
 		};
-		2A2EB2B71F98956800F9DD43 /* Debug */ = {
+		2A27B6351FA1CCD700CE9810 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -487,23 +311,21 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CVSS3A7EHS;
 				INFOPLIST_FILE = MFBStockManagement/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/MFBStockManagement/Captuvo/LIb",
-					"$(PROJECT_DIR)/MFBStockManagement/Captuvo/Lib",
+					"$(PROJECT_DIR)/Captuvo/Lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MFB.MFBStockManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MFBStockManagement/Captuvo/Include/MFBStockManagement-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Captuvo/MFBStockManagement-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		2A2EB2B81F98956800F9DD43 /* Release */ = {
+		2A27B6361FA1CCD700CE9810 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -511,123 +333,41 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CVSS3A7EHS;
 				INFOPLIST_FILE = MFBStockManagement/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/MFBStockManagement/Captuvo/LIb",
-					"$(PROJECT_DIR)/MFBStockManagement/Captuvo/Lib",
+					"$(PROJECT_DIR)/Captuvo/Lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MFB.MFBStockManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MFBStockManagement/Captuvo/Include/MFBStockManagement-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Captuvo/MFBStockManagement-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		2A2EB2BA1F98956800F9DD43 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MFBStockManagementTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MFB.MFBStockManagementTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MFBStockManagement.app/MFBStockManagement";
-			};
-			name = Debug;
-		};
-		2A2EB2BB1F98956800F9DD43 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MFBStockManagementTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MFB.MFBStockManagementTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MFBStockManagement.app/MFBStockManagement";
-			};
-			name = Release;
-		};
-		2A2EB2BD1F98956800F9DD43 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MFBStockManagementUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MFB.MFBStockManagementUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MFBStockManagement;
-			};
-			name = Debug;
-		};
-		2A2EB2BE1F98956800F9DD43 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MFBStockManagementUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MFB.MFBStockManagementUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MFBStockManagement;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2A2EB2891F98956700F9DD43 /* Build configuration list for PBXProject "MFBStockManagement" */ = {
+		2A27B61D1FA1CCD700CE9810 /* Build configuration list for PBXProject "MFBStockManagement" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2A2EB2B41F98956800F9DD43 /* Debug */,
-				2A2EB2B51F98956800F9DD43 /* Release */,
+				2A27B6321FA1CCD700CE9810 /* Debug */,
+				2A27B6331FA1CCD700CE9810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A2EB2B61F98956800F9DD43 /* Build configuration list for PBXNativeTarget "MFBStockManagement" */ = {
+		2A27B6341FA1CCD700CE9810 /* Build configuration list for PBXNativeTarget "MFBStockManagement" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2A2EB2B71F98956800F9DD43 /* Debug */,
-				2A2EB2B81F98956800F9DD43 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2A2EB2B91F98956800F9DD43 /* Build configuration list for PBXNativeTarget "MFBStockManagementTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2A2EB2BA1F98956800F9DD43 /* Debug */,
-				2A2EB2BB1F98956800F9DD43 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2A2EB2BC1F98956800F9DD43 /* Build configuration list for PBXNativeTarget "MFBStockManagementUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2A2EB2BD1F98956800F9DD43 /* Debug */,
-				2A2EB2BE1F98956800F9DD43 /* Release */,
+				2A27B6351FA1CCD700CE9810 /* Debug */,
+				2A27B6361FA1CCD700CE9810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2A2EB2861F98956700F9DD43 /* Project object */;
+	rootObject = 2A27B61A1FA1CCD700CE9810 /* Project object */;
 }

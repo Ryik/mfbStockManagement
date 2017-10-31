@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+import Alamofire
 
 class ReceptionTableViewController: UITableViewController {
 
@@ -16,7 +18,31 @@ class ReceptionTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let todoEndpoint: String = "localhost:3000"
+        Alamofire.request(todoEndpoint)
+            .responseJSON { response in
+                // check for errors
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling")
+                    print(response.result.error!)
+                    return
+                }
+                
+                // make sure we got some JSON since that's what we expect
+                guard let json = response.result.value as? [String: Any] else {
+                    print("didn't get object as JSON from API")
+                    print("Error: \(response.result.error)")
+                    return
+                }
+                
+                // get and print the title
+                guard let todoTitle = json["id"] as? String else {
+                    print("Could not get todo title from JSON")
+                    return
+                }
+                print(todoTitle)
+            }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -15,6 +15,11 @@ class ViewController: UIViewController,CaptuvoEventsProtocol{
     @IBOutlet weak var versionlbl:UILabel!
     @IBOutlet weak var batterlbl:UILabel!
     
+    
+    
+    @IBAction func NextButton(_ sender: Any) {
+        performSegue(withIdentifier: "NextAction", sender: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class ReceptionTableViewController: UITableViewController {
 
@@ -18,31 +19,27 @@ class ReceptionTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let todoEndpoint: String = "localhost:3000"
-        Alamofire.request(todoEndpoint)
-            .responseJSON { response in
-                // check for errors
-                guard response.result.error == nil else {
-                    // got an error in getting the data, need to handle it
-                    print("error calling")
-                    print(response.result.error!)
-                    return
-                }
-                
-                // make sure we got some JSON since that's what we expect
-                guard let json = response.result.value as? [String: Any] else {
-                    print("didn't get object as JSON from API")
-                    print("Error: \(response.result.error)")
-                    return
-                }
-                
-                // get and print the title
-                guard let todoTitle = json["id"] as? String else {
-                    print("Could not get todo title from JSON")
-                    return
-                }
-                print(todoTitle)
-            }
+        
+        Alamofire.request("http://localhost:3000").responseJSON { response in
+            guard let json = response.result.value as? [String : NSArray] else { return print("FirstNOP") }
+            let doc: NSArray = json["data"]!
+            print(json.count) //Probleme, on a un dico à un seul élément
+            print(doc[1])
+            
+            let okok = JSON(json)
+            print(okok)
+            
+            
+            
+//            print(json)
+//            print("\nJSON récupéré\n")                    ok
+//            print(json["data"])
+//            print("json Data field accessed")             ok
+//            let data = json["data"]
+//            print(data)
+//            let name = try? JSONSerialization.jsonObject(with: data) as? [String : Any]
+            
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

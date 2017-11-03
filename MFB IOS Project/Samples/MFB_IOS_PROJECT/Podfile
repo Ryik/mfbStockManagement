@@ -7,10 +7,12 @@ target 'MFB_IOS_PROJECT' do
 
   # Pods for MFB_IOS_PROJECT
 	pod 'Alamofire'
+	pod 'SwiftyJSON'
   target 'MFB_IOS_PROJECTTests' do
     inherit! :search_paths
     # Pods for testing
 	pod 'Alamofire'
+	pod 'SwiftyJSON'
   end
 
 end

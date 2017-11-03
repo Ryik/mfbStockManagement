@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController,CaptuvoEventsProtocol{
     
@@ -20,6 +21,16 @@ class ViewController: UIViewController,CaptuvoEventsProtocol{
     @IBAction func NextButton(_ sender: Any) {
         performSegue(withIdentifier: "NextAction", sender: nil)
     }
+    
+    @IBAction func PhotoButton(_ sender: Any) {
+        performSegue(withIdentifier: "showCameraSegue", sender: nil)
+        Alamofire.request("http://localhost:3000").responseJSON { response in
+            guard let json = response.result.value as? [String: Any] else { return }
+            print (json)
+        }
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

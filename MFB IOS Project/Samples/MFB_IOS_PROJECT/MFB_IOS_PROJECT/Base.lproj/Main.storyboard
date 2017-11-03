@@ -65,6 +65,14 @@
                                     <action selector="NextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pRl-zt-8kx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-zb-Qv9">
+                                <rect key="frame" x="145" y="441" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Photo"/>
+                                <connections>
+                                    <action selector="PhotoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pfh-6K-0Ai"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -92,6 +100,7 @@
                         <outlet property="msrlbl" destination="XYZ-gE-T3n" id="gXU-Mr-6rb"/>
                         <outlet property="versionlbl" destination="Zgq-Cr-jcH" id="rtW-lx-8wi"/>
                         <segue destination="gGf-5l-gpy" kind="presentation" identifier="NextAction" id="VdG-7l-FSa"/>
+                        <segue destination="btW-9s-pRB" kind="presentation" identifier="showCameraSegue" id="uc6-mc-NgX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -126,6 +135,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYK-fu-5ff" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1233" y="214"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dtq-cs-Er5">
+            <objects>
+                <viewController id="btW-9s-pRB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9h7-mI-HuN"/>
+                        <viewControllerLayoutGuide type="bottom" id="bjf-vd-tra"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jel-un-lXr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fp8-tr-xRG">
+                                <rect key="frame" x="157.5" y="577" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hHl-PN-SFK"/>
+                                    <constraint firstAttribute="width" constant="60" id="yLP-13-qOq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="bjf-vd-tra" firstAttribute="top" secondItem="Fp8-tr-xRG" secondAttribute="bottom" constant="30" id="3Wn-oZ-fzi"/>
+                            <constraint firstItem="Fp8-tr-xRG" firstAttribute="centerX" secondItem="Jel-un-lXr" secondAttribute="centerX" id="C0C-1C-r07"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xei-m8-UiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234" y="952"/>
         </scene>
     </scenes>
 </document>

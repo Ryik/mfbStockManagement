@@ -23,11 +23,15 @@ class ReceptionTableViewController: UITableViewController {
         Alamofire.request("http://localhost:3000").responseJSON { response in
             guard let json = response.result.value as? [String : NSArray] else { return print("FirstNOP") }
             let doc: NSArray = json["data"]!
-            print(json.count) //Probleme, on a un dico à un seul élément
-            print(doc[1])
-            
+//            print(json.count) //Probleme, on a un dico à un seul élément
+//            print(doc[1])
+            print(doc[0])
+            let dic = doc[0]
+            print(dic["type"])
             let okok = JSON(json)
-            print(okok)
+//            print(okok)
+            let arrayNames =  okok["id"].stringValue
+//            print(okok["name"])
             
             
             

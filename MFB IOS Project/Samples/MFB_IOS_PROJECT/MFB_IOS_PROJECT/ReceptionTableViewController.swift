@@ -20,29 +20,28 @@ class ReceptionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request("http://localhost:3000").responseJSON { response in
-            guard let json = response.result.value as? [String : NSArray] else { return print("FirstNOP") }
-            let doc: NSArray = json["data"]!
-//            print(json.count) //Probleme, on a un dico à un seul élément
-//            print(doc[1])
-            print(doc[0])
-            let dic = doc[0]
-            print(dic["type"])
-            let okok = JSON(json)
-//            print(okok)
-            let arrayNames =  okok["id"].stringValue
-//            print(okok["name"])
+        Alamofire.request("http://localhost:3000/products").responseJSON { response in
+            // check for errors
+            guard response.result.error == nil else {
+                // got an error in getting the data, need to handle it
+                print("error calling GET on /products")
+                print(response.result.error!)
+                return
+            }
             
+            // make sure we got some JSON since that's what we expect
+            guard let json = JSON(response.result.value) as? JSON else {
+                print("didn't get products object as JSON from API")
+                print("Error: \(String(describing:response.result.error))")
+                return
+            }
             
-            
-//            print(json)
-//            print("\nJSON récupéré\n")                    ok
-//            print(json["data"])
-//            print("json Data field accessed")             ok
-//            let data = json["data"]
-//            print(data)
-//            let name = try? JSONSerialization.jsonObject(with: data) as? [String : Any]
-            
+            // get and print the title
+            guard let products = json["data"] as? JSON else {
+                print("Could not get products from JSON")
+                return
+            }
+            print("The first product name is : \(products[0]["attributes"]["name"])")
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

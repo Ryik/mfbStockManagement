@@ -13,14 +13,16 @@ import SwiftyJSON
 
 class ReceptionTableViewController: UITableViewController {
 
+
+    @IBOutlet var ProductTableView: UITableView?
     
-    var productName = [String]()
+   var productName = [String]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request("http://localhost:3000/products").responseJSON { response in
+        Alamofire.request(ProductRouter.get).responseJSON { response in
             // check for errors
             guard response.result.error == nil else {
                 // got an error in getting the data, need to handle it
@@ -41,8 +43,16 @@ class ReceptionTableViewController: UITableViewController {
                 print("Could not get products from JSON")
                 return
             }
-            print("The first product name is : \(products[0]["attributes"]["name"])")
+            var i = 0
+            while (products[i] != JSON.null) {
+                self.productName.append(products[i]["attributes"]["name"].string!)
+                i = i + 1
+            }
+            
+            self.ProductTableView?.reloadData()
         }
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -62,11 +72,11 @@ class ReceptionTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productName.count
+        return self.productName.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel!.text = productName[indexPath.row]
         return cell
     }

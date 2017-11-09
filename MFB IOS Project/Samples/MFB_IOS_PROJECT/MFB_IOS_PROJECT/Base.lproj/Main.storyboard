@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,9 +60,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdO-cu-z5G">
                                 <rect key="frame" x="145" y="403" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="NextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pRl-zt-8kx"/>
+                                    <action selector="NextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D4a-WU-tXD"/>
+                                    <outletCollection property="gestureRecognizers" destination="73I-wn-gO1" appends="YES" id="IOC-tt-urb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-zb-Qv9">
@@ -90,51 +92,47 @@
                             <constraint firstItem="XYZ-gE-T3n" firstAttribute="leading" secondItem="H1E-0w-UzD" secondAttribute="leading" id="vaB-d0-Nif"/>
                             <constraint firstItem="H1E-0w-UzD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53" id="wPI-Jv-dBp"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="oBx-wQ-M5O" appends="YES" id="fGo-3n-dXq"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="barcodelbl" destination="H1E-0w-UzD" id="JdZ-7N-vZV"/>
                         <outlet property="batterlbl" destination="gdh-Mq-F0E" id="PI7-le-K9h"/>
                         <outlet property="msrlbl" destination="XYZ-gE-T3n" id="gXU-Mr-6rb"/>
                         <outlet property="versionlbl" destination="Zgq-Cr-jcH" id="rtW-lx-8wi"/>
-                        <segue destination="gGf-5l-gpy" kind="presentation" identifier="NextAction" id="VdG-7l-FSa"/>
                         <segue destination="btW-9s-pRB" kind="presentation" identifier="showCameraSegue" id="uc6-mc-NgX"/>
+                        <segue destination="wSj-3K-gT8" kind="presentation" identifier=" NextAction" id="C51-pr-95f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pinchGestureRecognizer id="oBx-wQ-M5O"/>
+                <pinchGestureRecognizer id="73I-wn-gO1"/>
             </objects>
             <point key="canvasLocation" x="279.19999999999999" y="213.64317841079463"/>
         </scene>
         <!--Reception Table View Controller-->
-        <scene sceneID="Fr3-jL-4Zm">
+        <scene sceneID="OLs-3U-R8o">
             <objects>
-                <tableViewController id="gGf-5l-gpy" customClass="ReceptionTableViewController" customModule="MFB_IOS_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ngT-Mf-Wp8">
+                <tableViewController id="wSj-3K-gT8" customClass="ReceptionTableViewController" customModule="MFB_IOS_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wef-T4-95x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4Ch-MW-vtz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gl6-m6-T28">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Ch-MW-vtz" id="FAw-rk-faq">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gl6-m6-T28" id="oNV-jM-af2">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="gGf-5l-gpy" id="mLp-ev-Du5"/>
-                            <outlet property="delegate" destination="gGf-5l-gpy" id="umb-Mw-NE0"/>
-                        </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="ProductTableView" destination="Wef-T4-95x" id="cHf-NC-tVM"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gYK-fu-5ff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9sP-BP-23v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1233" y="214"/>
+            <point key="canvasLocation" x="1314" y="111"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dtq-cs-Er5">

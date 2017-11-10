@@ -14,13 +14,15 @@ import SwiftyJSON
 class ReceptionTableViewController: UITableViewController {
 
 
-    @IBOutlet var ProductTableView: UITableView?
+    @IBOutlet var ProductTableView: UITableView!
     
    var productName = [String]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         Alamofire.request(ProductRouter.get).responseJSON { response in
             // check for errors
@@ -48,8 +50,8 @@ class ReceptionTableViewController: UITableViewController {
                 self.productName.append(products[i]["attributes"]["name"].string!)
                 i = i + 1
             }
-            
-            self.ProductTableView?.reloadData()
+
+            self.ProductTableView.reloadData()
         }
         
         
@@ -72,6 +74,7 @@ class ReceptionTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(self.productName.count)
         return self.productName.count
     }
 

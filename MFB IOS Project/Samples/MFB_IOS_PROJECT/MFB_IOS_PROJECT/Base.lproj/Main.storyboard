@@ -63,8 +63,8 @@
                                 <gestureRecognizers/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="NextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D4a-WU-tXD"/>
                                     <outletCollection property="gestureRecognizers" destination="73I-wn-gO1" appends="YES" id="IOC-tt-urb"/>
+                                    <segue destination="wSj-3K-gT8" kind="presentation" identifier="NextAction" id="X72-H2-ixn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-zb-Qv9">
@@ -99,7 +99,6 @@
                         <outlet property="msrlbl" destination="XYZ-gE-T3n" id="gXU-Mr-6rb"/>
                         <outlet property="versionlbl" destination="Zgq-Cr-jcH" id="rtW-lx-8wi"/>
                         <segue destination="btW-9s-pRB" kind="presentation" identifier="showCameraSegue" id="uc6-mc-NgX"/>
-                        <segue destination="wSj-3K-gT8" kind="presentation" identifier=" NextAction" id="C51-pr-95f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -116,12 +115,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gl6-m6-T28">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="60" id="Gl6-m6-T28">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gl6-m6-T28" id="oNV-jM-af2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQA-5X-jw1">
+                                            <rect key="frame" x="16" y="19" width="124" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -132,7 +140,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sP-BP-23v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314" y="111"/>
+            <point key="canvasLocation" x="1312.8" y="110.19490254872565"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dtq-cs-Er5">

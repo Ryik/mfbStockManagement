@@ -2,4 +2,131 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFB_IOS_PROJECT/ReceptionTableViewController.swift"
+            timestampString = "531998900.824064"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFB_IOS_PROJECT/ReceptionTableViewController.swift"
+            timestampString = "531998900.824427"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFB_IOS_PROJECT/ReceptionTableViewController.swift"
+            timestampString = "531998900.824649"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ReceptionTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MFB_IOS_PROJECT.ReceptionTableViewController.__deallocating_deinit"
+                  moduleName = "MFB_IOS_PROJECT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielmorin/Desktop/mfbStockManagement/MFB%20IOS%20Project/Samples/MFB_IOS_PROJECT/MFB_IOS_PROJECT/ReceptionTableViewController.swift"
+                  timestampString = "531994585.618396"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MFB_IOS_PROJECT.ReceptionTableViewController.init(style: __C.UITableViewStyle) -&gt; MFB_IOS_PROJECT.ReceptionTableViewController"
+                  moduleName = "MFB_IOS_PROJECT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielmorin/Desktop/mfbStockManagement/MFB%20IOS%20Project/Samples/MFB_IOS_PROJECT/MFB_IOS_PROJECT/ReceptionTableViewController.swift"
+                  timestampString = "531994585.620486"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MFB_IOS_PROJECT.ReceptionTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MFB_IOS_PROJECT.ReceptionTableViewController"
+                  moduleName = "MFB_IOS_PROJECT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielmorin/Desktop/mfbStockManagement/MFB%20IOS%20Project/Samples/MFB_IOS_PROJECT/MFB_IOS_PROJECT/ReceptionTableViewController.swift"
+                  timestampString = "531994585.623064"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MFB_IOS_PROJECT.ReceptionTableViewController.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;MFB_IOS_PROJECT.ReceptionTableViewController&gt;"
+                  moduleName = "MFB_IOS_PROJECT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielmorin/Desktop/mfbStockManagement/MFB%20IOS%20Project/Samples/MFB_IOS_PROJECT/MFB_IOS_PROJECT/ReceptionTableViewController.swift"
+                  timestampString = "531994585.62534"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MFB_IOS_PROJECT.ReceptionTableViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;MFB_IOS_PROJECT.ReceptionTableViewController&gt;"
+                  moduleName = "MFB_IOS_PROJECT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabrielmorin/Desktop/mfbStockManagement/MFB%20IOS%20Project/Samples/MFB_IOS_PROJECT/MFB_IOS_PROJECT/ReceptionTableViewController.swift"
+                  timestampString = "531994585.628014"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

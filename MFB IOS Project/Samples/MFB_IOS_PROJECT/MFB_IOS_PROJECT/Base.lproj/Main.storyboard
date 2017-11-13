@@ -64,7 +64,7 @@
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="73I-wn-gO1" appends="YES" id="IOC-tt-urb"/>
-                                    <segue destination="wSj-3K-gT8" kind="presentation" identifier="NextAction" id="X72-H2-ixn"/>
+                                    <segue destination="5cw-gZ-1Nf" kind="presentation" identifier="NextAction" id="X72-H2-ixn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-zb-Qv9">
@@ -106,7 +106,7 @@
             </objects>
             <point key="canvasLocation" x="279.19999999999999" y="213.64317841079463"/>
         </scene>
-        <!--Reception Table View Controller-->
+        <!--Choose your product-->
         <scene sceneID="OLs-3U-R8o">
             <objects>
                 <tableViewController id="wSj-3K-gT8" customClass="ReceptionTableViewController" customModule="MFB_IOS_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,13 +134,14 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Choose your product" id="b9P-Ho-Voi"/>
                     <connections>
                         <outlet property="ProductTableView" destination="Wef-T4-95x" id="cHf-NC-tVM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sP-BP-23v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312.8" y="110.19490254872565"/>
+            <point key="canvasLocation" x="2266" y="109"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dtq-cs-Er5">
@@ -178,6 +179,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xei-m8-UiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1234" y="952"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GdH-5X-iy5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5cw-gZ-1Nf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="evN-W6-85O">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wSj-3K-gT8" kind="relationship" relationship="rootViewController" id="3Ia-lC-nQd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MHL-eN-e2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="109.74512743628186"/>
         </scene>
     </scenes>
 </document>

@@ -120,6 +120,10 @@ class ReceptionTableViewController: UITableViewController {
         return searchController.isActive && !searchBarIsEmpty()
     }
 
+    // MARK : - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
     
 }
 
@@ -130,3 +134,6 @@ extension ReceptionTableViewController: UISearchResultsUpdating {
         filterContentForSearchText(searchController.searchBar.text!)
     }
 }
+
+
+

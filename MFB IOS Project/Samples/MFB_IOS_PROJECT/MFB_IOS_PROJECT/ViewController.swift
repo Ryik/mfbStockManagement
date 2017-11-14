@@ -16,6 +16,7 @@ class ViewController: UIViewController,CaptuvoEventsProtocol{
     @IBOutlet weak var versionlbl:UILabel!
     @IBOutlet weak var batterlbl:UILabel!
     
+//    var productName : String?
     
     
     @IBAction func NextButton(_ sender: Any) {

@@ -123,8 +123,17 @@ class ReceptionTableViewController: UITableViewController {
     // MARK : - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ProductChoosedSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                var name : String! = productName[indexPath.row]
+                if isFiltering() {
+                    name = filteredProductName[indexPath.row]
+                }
+                let controller = (segue.destination as! ViewController)
+//                controller.productName = name
+            }
+        }
     }
-    
 }
 
 

@@ -52,6 +52,7 @@
 		300D3DB71AF9ED3400170296 /* Captuvo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Captuvo.h; path = ../../Include/Captuvo.h; sourceTree = "<group>"; };
 		300D3DB81AF9ED3D00170296 /* libCaptuvoSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCaptuvoSDK.a; path = ../../Lib/libCaptuvoSDK.a; sourceTree = "<group>"; };
 		42285358CC0F09DF755F7758 /* Pods-MFB_IOS_PROJECT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFB_IOS_PROJECT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MFB_IOS_PROJECT/Pods-MFB_IOS_PROJECT.debug.xcconfig"; sourceTree = "<group>"; };
+		4FE6DD001FBB0922006998D0 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FEEA9A61FA76F1D001BF87C /* MFB_IOS_PROJECT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFB_IOS_PROJECT-Bridging-Header.h"; sourceTree = "<group>"; };
 		938A12BC246C7AAF9ECD7B90 /* Pods-MFB_IOS_PROJECT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFB_IOS_PROJECT.release.xcconfig"; path = "Pods/Target Support Files/Pods-MFB_IOS_PROJECT/Pods-MFB_IOS_PROJECT.release.xcconfig"; sourceTree = "<group>"; };
 		D195E5490ED41A12AAFD047B /* Pods-MFB_IOS_PROJECTTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFB_IOS_PROJECTTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MFB_IOS_PROJECTTests/Pods-MFB_IOS_PROJECTTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		300D3D7F1AF9DE3300170296 = {
 			isa = PBXGroup;
 			children = (
+				4FE6DD001FBB0922006998D0 /* MyPlayground.playground */,
 				300BD2B71AFB0CD700797BE1 /* SwiftSample.sh */,
 				300D3DB81AF9ED3D00170296 /* libCaptuvoSDK.a */,
 				300D3DB71AF9ED3400170296 /* Captuvo.h */,

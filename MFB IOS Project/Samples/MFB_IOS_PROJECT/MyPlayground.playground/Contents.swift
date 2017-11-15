@@ -186,10 +186,6 @@ class BackEnd {
 
 class Entity {
     
-    // static func from_json_api(json_api: JSON) {
-    //    JsonApi.create_entity()
-    //}
-    
     var attributes: JSON
     static let json_api_type : String = "products"
     

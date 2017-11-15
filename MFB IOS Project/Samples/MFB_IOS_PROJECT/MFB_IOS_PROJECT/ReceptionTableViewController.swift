@@ -59,7 +59,7 @@ class ReceptionTableViewController: UITableViewController {
                 print("Could not get products from JSON")
                 return
             }
-            print(products)
+            print(json)
             var i = 0
             while (products[i] != JSON.null) {
                 self.productName.append(products[i]["attributes"]["name"].string!)

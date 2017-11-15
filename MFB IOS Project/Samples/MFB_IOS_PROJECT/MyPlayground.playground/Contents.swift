@@ -37,9 +37,16 @@ class JsonApiInstance {
         return JsonApiInstance(id: entity.id, attributes: entity.attributes , type: JSON(type(of: entity).json_api_type))
         
     }
-    
-    
-    
+
+    func create_entity() -> Entity {
+        let data = json["data"]
+        if (data["type"] == "products") {
+            return Product(json: data["attributes"])
+        }
+        
+        return Entity(json: JSON.null)
+    }
+
 }
 
 func create_post_dictionnary (product_id : Int, owner_id : Int, container_id : Int, location_id : Int,
@@ -87,11 +94,6 @@ class JsonApiCollection {
         }
         return products
     }
-    
-    //static func create_entity(json: JSON) -> Entity {
-    //    let data = json["data"] as! JSON
-    //    return Product(json: data["attributes"])
-    //}
 }
 
 
@@ -204,9 +206,13 @@ class Entity {
     // static func from_json_api(json_api: JSON) {
     //    JsonApi.create_entity()
     //}
+    
     var attributes: JSON
     static let json_api_type : String = "products"
     
+    static func fromJSON(jsonapi: JsonApiInstance) -> Entity {
+        return jsonapi.create_entity()
+    }
     
     init(json: JSON) {
         self.attributes = json
@@ -238,7 +244,6 @@ class Entity {
 class Product : Entity {
     
     static var backEnd: BackEnd = BackEnd()
-    
     
     var name: String? {
         get {
@@ -278,17 +283,7 @@ let parameters: JSON =
         ]
 ]
 
-let productexemple : JSON =
-[
-    "id" : "1",
-    "attributes" : [
-        "name" : "product 1",
-        "base-unit-of-measure" : "kg"
-    ],
-    "type" : "products"
-]
-
-let caca : Product = Product(json: productexemple)
-
-//Product.backEnd.get_records()
-print(caca.attributes)
+let productexample : JSON = ["data":["id":"1","attributes":["name":"product 1","base-unit-of-measure":"kg"],"type":"products"]]
+let json : JsonApiInstance = JsonApiInstance(json: productexample)
+let prod : Product = Product.fromJSON(jsonapi: json) as! Product
+print(prod.base_unit_of_measure)

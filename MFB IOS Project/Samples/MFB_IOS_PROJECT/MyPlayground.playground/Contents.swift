@@ -12,7 +12,9 @@ import XCPlayground
 var str = "Hello, playground"
 print(str)
 
-
+class Dic {
+    static var dico : [String : Entity.Type] = ["products" : Product.self]
+}
 
 class JsonApiInstance {
     var json : JSON
@@ -49,7 +51,6 @@ class JsonApiInstance {
 
 }
 
-let type_dictionnary : [String : Any] = ["products" : Product]
 
 class JsonApiCollection {
     var json: JSON
@@ -62,15 +63,13 @@ class JsonApiCollection {
     
     
     func create_entities() -> [Entity] {
-        var entities : [Entity] = []
-        var i = 0
-        while (json[i] != JSON.null) {
-            let attributes = (json[i]["data"]["attributes"])
-            let temp : type_dictionnary[json[i]["data"]["type"]] = ype_dictionnary[json[i]["data"]["type"]](json : attributes)
-            //     print(temp)
-            entities.append(temp)
-            i = i + 1
-        }
+        var entities = [Entity]()
+        let data = json["data"].arrayValue
+        entities = data.map({ json_entity in
+            let json_entity_type = json_entity["type"]
+            let typ = Dic.dico[json_entity_type.stringValue]!
+            return typ.init(json: json_entity["attributes"])
+        })
         return entities
     }
 }
@@ -150,7 +149,8 @@ class BackEnd {
     
     func get_records() -> [Product] {
         var saveJSON : [Product] = []
-        
+        XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
         Alamofire.request(ProductRouter.getProducts).responseJSON { response in
             // check for errors
             guard response.result.error == nil else {
@@ -173,7 +173,10 @@ class BackEnd {
                 return
             }
             let jsonapicollection : JsonApiCollection = JsonApiCollection(json: products)
-            saveJSON = jsonapicollection.create_product()
+            saveJSON = jsonapicollection.create_entities() as! [Product]
+            print(saveJSON)
+            XCPlaygroundPage.currentPage.needsIndefiniteExecution = false
+
             
         }
         return saveJSON
@@ -193,7 +196,7 @@ class Entity {
         return jsonapi.create_entity()
     }
     
-    init(json: JSON) {
+    required init(json: JSON) {
         self.attributes = json
     }
     
@@ -245,6 +248,8 @@ class Product : Entity {
      return backEnd.get_all()
      }*/
 }
+
+
 let parameters: JSON =
     [
         "data": [
@@ -267,3 +272,4 @@ let productexample : JSON = ["data":["id":"1","attributes":["name":"product 1","
 let json : JsonApiInstance = JsonApiInstance(json: productexample)
 let prod : Product = Product.fromJSON(jsonapi: json) as! Product
 print(prod.base_unit_of_measure)
+print(Product.backEnd.get_records())

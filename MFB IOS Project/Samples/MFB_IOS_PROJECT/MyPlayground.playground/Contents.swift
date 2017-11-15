@@ -94,66 +94,68 @@ class JsonApiCollection {
     //}
 }
 
-enum ProductRouter: URLRequestConvertible {
-    static let baseURLString = "http://localhost:3000/"
-    
-    case get
-    case post([String : Any])
-    
-    func asURLRequest() throws -> URLRequest {
-        var method: HTTPMethod {
-            switch self {
-            case .get:
-                return .get
-            case .post:
-                return .post
-            }
-        }
-        
-        let params: ([String: Any]?) = {
-            switch self {
-            case .get:
-                return nil
-            case .post(let newEntity):
-                return (newEntity)
-            }
-        }()
-        
-        let url: URL = {
-            // build up and return the URL for each endpoint
-            let relativePath: String?
-            switch self {
-            case .get:
-                relativePath = "products"
-            case .post:
-                relativePath = "shipment_receipts"
-            }
-            
-            var url = URL(string: ProductRouter.baseURLString)!
-            if let relativePath = relativePath {
-                url = url.appendingPathComponent(relativePath)
-            }
-            return url
-        }()
-        
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = method.rawValue
-        
-        let encoding: ParameterEncoding = {
-            switch method {
-            case .get:
-                return URLEncoding.default
-            case .post:
-                return JSONEncoding.default
-            default:
-                return JSONEncoding.default
-            }
-        }()
-        return try encoding.encode(urlRequest, with: params)
-    }
-}
+
 
 class BackEnd {
+    
+    enum ProductRouter: URLRequestConvertible {
+        static let baseURLString = "http://localhost:3000/"
+        
+        case getProducts
+        case post([String : Any])
+        
+        func asURLRequest() throws -> URLRequest {
+            var method: HTTPMethod {
+                switch self {
+                case .getProducts:
+                    return .get
+                case .post:
+                    return .post
+                }
+            }
+            
+            let params: ([String: Any]?) = {
+                switch self {
+                case .getProducts:
+                    return nil
+                case .post(let newEntity):
+                    return (newEntity)
+                }
+            }()
+            
+            let url: URL = {
+                // build up and return the URL for each endpoint
+                let relativePath: String?
+                switch self {
+                case .getProducts:
+                    relativePath = "products"
+                case .post:
+                    relativePath = "shipment_receipts"
+                }
+                
+                var url = URL(string: ProductRouter.baseURLString)!
+                if let relativePath = relativePath {
+                    url = url.appendingPathComponent(relativePath)
+                }
+                return url
+            }()
+            
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = method.rawValue
+            
+            let encoding: ParameterEncoding = {
+                switch method {
+                case .get:
+                    return URLEncoding.default
+                case .post:
+                    return JSONEncoding.default
+                default:
+                    return JSONEncoding.default
+                }
+            }()
+            return try encoding.encode(urlRequest, with: params)
+        }
+    }
     
     func post_record(parameters : JsonApiInstance) {
         XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
@@ -165,10 +167,10 @@ class BackEnd {
         }
     }
     
-    static func get_all() -> [Product] {
+    func get_records() -> [Product] {
         var saveJSON : [Product] = []
         
-        Alamofire.request(ProductRouter.get).responseJSON { response in
+        Alamofire.request(ProductRouter.getProducts).responseJSON { response in
             // check for errors
             guard response.result.error == nil else {
                 // got an error in getting the data, need to handle it
@@ -191,6 +193,7 @@ class BackEnd {
             }
             let jsonapicollection : JsonApiCollection = JsonApiCollection(json: products)
             saveJSON = jsonapicollection.create_product()
+            
         }
         return saveJSON
     }
@@ -234,7 +237,7 @@ class Entity {
 
 class Product : Entity {
     
-    // static backEnd: BackEnd = BackEnd("Product")
+    static var backEnd: BackEnd = BackEnd()
     
     
     var name: String? {
@@ -274,8 +277,18 @@ let parameters: JSON =
             "type":"shipment-receipts"
         ]
 ]
-let back : BackEnd = BackEnd()
-let jss : JsonApiInstance = JsonApiInstance(json : parameters)
-back.post_record(parameters: jss)
 
+let productexemple : JSON =
+[
+    "id" : "1",
+    "attributes" : [
+        "name" : "product 1",
+        "base-unit-of-measure" : "kg"
+    ],
+    "type" : "products"
+]
 
+let caca : Product = Product(json: productexemple)
+
+//Product.backEnd.get_records()
+print(caca.attributes)

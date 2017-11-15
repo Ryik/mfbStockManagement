@@ -64,7 +64,8 @@ class JsonApiCollection {
     
     func create_entities() -> [Entity] {
         var entities = [Entity]()
-        entities = json.arrayValue.map({ json_entity in
+        let data: JSON = json["data"]
+        entities = data.arrayValue.map({ json_entity in
             let json_entity_type = json_entity["type"]
             let typ = Dic.dico[json_entity_type.stringValue]!
             return typ.init(json: json_entity["attributes"])
@@ -77,8 +78,12 @@ class JsonApiCollection {
 
 class BackEnd {
     
+    static var products = [Entity]()
+    
     enum ProductRouter: URLRequestConvertible {
         static let baseURLString = "http://localhost:3000/"
+        
+        
         
         case getProducts
         case post([String : Any])
@@ -137,17 +142,20 @@ class BackEnd {
     }
     
     func post_record(parameters : JsonApiInstance) {
+        
         XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
         
         Alamofire.request(ProductRouter.post(parameters.json.object as! [String : Any])).responseJSON { request in
             print(request)
             print("test")
+            
             XCPlaygroundPage.currentPage.needsIndefiniteExecution = false
         }
     }
     
-    func get_records() -> [Product] {
+    func get_records()  {
         var saveJSON : [Product] = []
+        
         XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 
         Alamofire.request(ProductRouter.getProducts).responseJSON { response in
@@ -158,23 +166,21 @@ class BackEnd {
                 print(response.result.error!)
                 return
             }
-            
             // make sure we got some JSON since that's what we expect
-            guard response.result.value is JSON else {
+            guard let product : JSON = JSON(response.result.value as Any) else {
                 print("didn't get products object as JSON from API")
                 print("Error: (String(describing:response.result.error))")
                 return
             }
             
-            let jsonapicollection : JsonApiCollection = JsonApiCollection(json: response.result.value as! JSON)
-            print(jsonapicollection)
+            let jsonapicollection : JsonApiCollection = JsonApiCollection(json: product)
             saveJSON = jsonapicollection.create_entities() as! [Product]
-            print(saveJSON)
-            XCPlaygroundPage.currentPage.needsIndefiniteExecution = false
-
+            BackEnd.products = saveJSON
             
+            XCPlaygroundPage.currentPage.needsIndefiniteExecution = false
         }
-        return saveJSON
+        
+     
     }
 }
 
@@ -238,10 +244,6 @@ class Product : Entity {
             attributes["base-unit-of-measure"] = JSON(newValue as Any)
         }
     }
-    
-    /*    static func get_products() -> [Product] {
-     return backEnd.get_all()
-     }*/
 }
 
 
@@ -262,10 +264,3 @@ let parameters: JSON =
         ]
 ]
 
-/*
-let productexample : JSON = ["data":["id":"1","attributes":["name":"product 1","base-unit-of-measure":"kg"],"type":"products"]]
-let json : JsonApiInstance = JsonApiInstance(json: productexample)
-let prod : Product = Product.fromJSON(jsonapi: json) as! Product
-print(prod.base_unit_of_measure)
-*/
-let prodé = Product.backEnd.get_records()

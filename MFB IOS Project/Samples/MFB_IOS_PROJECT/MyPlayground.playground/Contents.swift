@@ -49,28 +49,7 @@ class JsonApiInstance {
 
 }
 
-func create_post_dictionnary (product_id : Int, owner_id : Int, container_id : Int, location_id : Int,
-                              quantity_value : String, quantity_unit_of_measure : String, receipt_datetime : String,
-                              memo : String?, type : String) -> [String: Any] {
-    let parameters: [String: Any] =
-        [
-            "data": [
-                "attributes" :  [
-                    "product-id" : product_id,
-                    "owner-id" : owner_id,
-                    "container-id" : container_id,
-                    "location-id" : location_id,
-                    "quantity-value" : quantity_value,
-                    "quantity-unit-of-measure" : quantity_unit_of_measure,
-                    "receipt-datetime" : receipt_datetime,
-                    "memo": memo as Any
-                ],
-                "type": type
-            ]
-    ]
-    return parameters
-}
-
+let type_dictionnary : [String : Any] = ["products" : Product]
 
 class JsonApiCollection {
     var json: JSON
@@ -80,19 +59,19 @@ class JsonApiCollection {
         self.json = json
     }
     
-    func create_product() -> [Product] {
-        var products : [Product] = []
+    
+    
+    func create_entities() -> [Entity] {
+        var entities : [Entity] = []
         var i = 0
         while (json[i] != JSON.null) {
-            let name = (json[i]["attributes"]["name"])
-            let base = (json[i]["attributes"]["base-unit-of-measure"])
-            let tempJson : JSON = ["name" : name, "base-unit-of-measure" : base]
-            let temp : Product = Product(json : tempJson)
+            let attributes = (json[i]["data"]["attributes"])
+            let temp : type_dictionnary[json[i]["data"]["type"]] = ype_dictionnary[json[i]["data"]["type"]](json : attributes)
             //     print(temp)
-            products.append(temp)
+            entities.append(temp)
             i = i + 1
         }
-        return products
+        return entities
     }
 }
 
@@ -282,6 +261,7 @@ let parameters: JSON =
             "type":"shipment-receipts"
         ]
 ]
+
 
 let productexample : JSON = ["data":["id":"1","attributes":["name":"product 1","base-unit-of-measure":"kg"],"type":"products"]]
 let json : JsonApiInstance = JsonApiInstance(json: productexample)

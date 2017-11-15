@@ -38,36 +38,36 @@ class ReceptionTableViewController: UITableViewController {
         definesPresentationContext = true
         
         
-        Alamofire.request(ProductRouter.get).responseJSON { response in
-            // check for errors
-            guard response.result.error == nil else {
-                // got an error in getting the data, need to handle it
-                print("error calling GET on /products")
-                print(response.result.error!)
-                return
-            }
-            
-            // make sure we got some JSON since that's what we expect
-            guard let json = JSON(response.result.value) as? JSON else {
-                print("didn't get products object as JSON from API")
-                print("Error: \(String(describing:response.result.error))")
-                return
-            }
-            
-            // get and print the title
-            guard let products = json["data"] as? JSON else {
-                print("Could not get products from JSON")
-                return
-            }
-            print(json)
-            var i = 0
-            while (products[i] != JSON.null) {
-                self.productName.append(products[i]["attributes"]["name"].string!)
-                i = i + 1
-            }
-
-            self.ProductTableView.reloadData()
-        }
+//        Alamofire.request(ProductRouter.get).responseJSON { response in
+//            // check for errors
+//            guard response.result.error == nil else {
+//                // got an error in getting the data, need to handle it
+//                print("error calling GET on /products")
+//                print(response.result.error!)
+//                return
+//            }
+//
+//            // make sure we got some JSON since that's what we expect
+//            guard let json = JSON(response.result.value) as? JSON else {
+//                print("didn't get products object as JSON from API")
+//                print("Error: \(String(describing:response.result.error))")
+//                return
+//            }
+//
+//            // get and print the title
+//            guard let products = json["data"] as? JSON else {
+//                print("Could not get products from JSON")
+//                return
+//            }
+//            var i = 0
+//            while (products[i] != JSON.null) {
+//                self.productName.append(products[i]["attributes"]["name"].string!)
+//                i = i + 1
+//            }
+//
+//            self.ProductTableView.reloadData()
+//        }
+        self.ProductTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

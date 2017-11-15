@@ -8,11 +8,13 @@ target 'MFB_IOS_PROJECT' do
   # Pods for MFB_IOS_PROJECT
 	pod 'Alamofire'
 	pod 'SwiftyJSON'
+	pod 'Eureka'
   target 'MFB_IOS_PROJECTTests' do
     inherit! :search_paths
     # Pods for testing
 	pod 'Alamofire'
 	pod 'SwiftyJSON’
+	pod 'Eureka'
   end
 
 end

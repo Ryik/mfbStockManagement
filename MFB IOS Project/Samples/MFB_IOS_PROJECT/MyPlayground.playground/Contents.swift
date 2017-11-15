@@ -240,6 +240,7 @@ class Product : Entity {
             attributes["base-unit-of-measure"] = JSON(newValue as Any)
         }
     }
+
 }
 
 

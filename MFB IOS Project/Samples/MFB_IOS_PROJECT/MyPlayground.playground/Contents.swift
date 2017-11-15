@@ -12,6 +12,8 @@ import XCPlayground
 var str = "Hello, playground"
 print(str)
 
+
+
 class JsonApiInstance {
     var json : JSON
     
@@ -20,16 +22,14 @@ class JsonApiInstance {
     }
     
     init(id: Int?, attributes: JSON , type: JSON) {
-        let parameters: JSON =
-            [
-                "data": [
-                    "id" : id as Any,
-                    "attributes" :  attributes,
-                    "type": type
-                ]
-        ]
-        json = JSON.null
-        self.post_request(parameters: parameters)
+        self.json = JSON()
+        
+        json["data"] = JSON()
+        json["data"]["id"] = JSON(id as Any)
+        json["data"]["attributes"] = attributes
+        json["data"]["type"] = type
+
+        //self.post_request(parameters: parameters)
         
     }
     
@@ -39,15 +39,7 @@ class JsonApiInstance {
     }
     
     
-    func post_request(parameters : JSON) {
-        XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-
-        Alamofire.request(ProductRouter.post(parameters.object as! [String : Any])).responseJSON { request in
-         print(request)
-         print("test")
-         XCPlaygroundPage.currentPage.needsIndefiniteExecution = false
-         }
-    }
+    
 }
 
 func create_post_dictionnary (product_id : Int, owner_id : Int, container_id : Int, location_id : Int,
@@ -163,9 +155,13 @@ enum ProductRouter: URLRequestConvertible {
 
 class BackEnd {
     
-    func shipment_request(parameters : [String : Any]) {
-        Alamofire.request(ProductRouter.post(parameters)).responseJSON { request in
+    func post_record(parameters : JsonApiInstance) {
+        XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+        
+        Alamofire.request(ProductRouter.post(parameters.json.object as! [String : Any])).responseJSON { request in
             print(request)
+            print("test")
+            XCPlaygroundPage.currentPage.needsIndefiniteExecution = false
         }
     }
     
@@ -278,5 +274,8 @@ let parameters: JSON =
             "type":"shipment-receipts"
         ]
 ]
+let back : BackEnd = BackEnd()
+let jss : JsonApiInstance = JsonApiInstance(json : parameters)
+back.post_record(parameters: jss)
 
 

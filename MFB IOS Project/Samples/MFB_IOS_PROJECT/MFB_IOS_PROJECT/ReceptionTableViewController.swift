@@ -127,9 +127,9 @@ class ReceptionTableViewController: UITableViewController  {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var name: String = productName[indexPath.row]
-        if isFiltering() {
-            name = filteredProductName[indexPath.row]
-        }
+//        if isFiltering() {
+//            name = filteredProductName[indexPath.row]
+//        }
         delegate?.addItemReceptionController(controller: self, didFinishingdAdding: name)
         navigationController?.popViewController(animated: true)
         

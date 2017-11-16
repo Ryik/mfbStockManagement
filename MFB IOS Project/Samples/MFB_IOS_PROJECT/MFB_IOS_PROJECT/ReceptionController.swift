@@ -22,7 +22,8 @@ class ReceptionController : FormViewController, ReceptionTableViewControllerDele
     
 
     let product : Ressource = Ressource()
-    var refreshingProductName : ButtonRowOf<String>?
+    var refreshingProductName : TextRow?
+    var refreshingOwner : TextRow?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,10 +59,17 @@ class ReceptionController : FormViewController, ReceptionTableViewControllerDele
         }
         
         form +++ Section("Liste déroulante")
+            <<< TextRow() { row in
+                row.title = "                       Aucun article choisi"
+                refreshingProductName = row
+            }
             <<< ButtonRow() { button in
                 button.title = "Article"
                 button.onCellSelection(self.actingSegues)
-                refreshingProductName = button
+            }
+            <<< TextRow() { row in
+                row.title = "                  Aucun propriétaire choisi"
+                refreshingOwner = row
             }
             <<< ButtonRow() { button in
                 button.title = "Propriétaire"

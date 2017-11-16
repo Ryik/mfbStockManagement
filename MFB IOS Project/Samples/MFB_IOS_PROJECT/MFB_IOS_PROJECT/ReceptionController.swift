@@ -9,9 +9,20 @@
 import UIKit
 import Eureka
 
-class ReceptionController : FormViewController {
+class ReceptionController : FormViewController, ReceptionTableViewControllerDelegate {
+    
+    func addItemReceptionControllerDidCancel(controller: ReceptionTableViewController) {
+    }
+    
+    func addItemReceptionController(controller: ReceptionTableViewController, didFinishingdAdding item: String) {
+        product.article = item
+        refreshingProductName?.title = item
+        refreshingProductName?.reload()
+    }
+    
 
     let product : Ressource = Ressource()
+    var refreshingProductName : ButtonRowOf<String>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +61,7 @@ class ReceptionController : FormViewController {
             <<< ButtonRow() { button in
                 button.title = "Article"
                 button.onCellSelection(self.actingSegues)
-                
+                refreshingProductName = button
             }
             <<< ButtonRow() { button in
                 button.title = "Propriétaire"
@@ -70,5 +81,12 @@ class ReceptionController : FormViewController {
     func actingSegues(cell : ButtonCellOf<String> ,row: ButtonRow) {
         let segue : String = row.title! + "Segue"
         performSegue(withIdentifier: segue, sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ArticleSegue") {
+            let controller = segue.destination as! ReceptionTableViewController
+            controller.delegate = self
+        }
     }
 }

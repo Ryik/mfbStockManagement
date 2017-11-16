@@ -11,10 +11,14 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class ReceptionTableViewController: UITableViewController {
+protocol ReceptionTableViewControllerDelegate: class {
+    func addItemReceptionControllerDidCancel(controller : ReceptionTableViewController)
+    func addItemReceptionController(controller: ReceptionTableViewController, didFinishingdAdding item: String)
+}
 
+class ReceptionTableViewController: UITableViewController  {
     
-
+    weak var delegate : ReceptionTableViewControllerDelegate?
 
     @IBOutlet var ProductTableView: UITableView!
     
@@ -27,7 +31,6 @@ class ReceptionTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         // Setup the Search Controller
@@ -119,21 +122,17 @@ class ReceptionTableViewController: UITableViewController {
     func isFiltering() -> Bool {
         return searchController.isActive && !searchBarIsEmpty()
     }
-
-    // MARK : - Navigation
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ProductChoosedSegue" {
-            if let indexPath = ProductTableView.indexPathForSelectedRow {
-                var name : String! = productName[indexPath.row]
-                if isFiltering() {
-                    name = filteredProductName[indexPath.row]
-                }
-                let controller = (segue.destination as! UINavigationController).topViewController as! ReceptionController
-                controller.product.article = name
-                
-            }
+    // MARK :- Click on cell
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var name: String = productName[indexPath.row]
+        if isFiltering() {
+            name = filteredProductName[indexPath.row]
         }
+        delegate?.addItemReceptionController(controller: self, didFinishingdAdding: name)
+        navigationController?.popViewController(animated: true)
+        
     }
 }
 
@@ -144,6 +143,7 @@ extension ReceptionTableViewController: UISearchResultsUpdating {
         filterContentForSearchText(searchController.searchBar.text!)
     }
 }
+
 
 
 

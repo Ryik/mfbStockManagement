@@ -47,7 +47,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Réception de marchandises" id="naM-KB-WkH"/>
                     <connections>
-                        <segue destination="5cw-gZ-1Nf" kind="show" identifier="ArticleSegue" id="dOS-bb-yJW"/>
+                        <segue destination="wSj-3K-gT8" kind="show" identifier="ArticleSegue" id="Ri9-dp-h01"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLa-PI-UkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,24 +132,6 @@
             <point key="canvasLocation" x="2326" y="-555"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="GdH-5X-iy5">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5cw-gZ-1Nf" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="evN-W6-85O">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="wSj-3K-gT8" kind="relationship" relationship="rootViewController" id="3Ia-lC-nQd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MHL-eN-e2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2338.4000000000001" y="213.64317841079463"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="wm5-9m-svs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="slK-mj-d7A" sceneMemberID="viewController">
@@ -169,6 +151,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Ri9-dp-h01"/>
         <segue reference="AJQ-co-obN"/>
     </inferredMetricsTieBreakers>
 </document>

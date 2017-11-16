@@ -17,6 +17,7 @@
 		2A5E9E2E1FBC8ABA00313197 /* Dic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E9E2D1FBC8ABA00313197 /* Dic.swift */; };
 		2A84FBC81FB3211200F3E533 /* ReceptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A84FBC71FB3211200F3E533 /* ReceptionTableViewController.swift */; };
 		2AB0EE321FA867900020046F /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB0EE311FA867900020046F /* Stock.swift */; };
+		2AF444461FBD8E8600532A81 /* ReceptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF444451FBD8E8600532A81 /* ReceptionController.swift */; };
 		300D3D8E1AF9DE3300170296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300D3D8D1AF9DE3300170296 /* AppDelegate.swift */; };
 		300D3D901AF9DE3300170296 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300D3D8F1AF9DE3300170296 /* ViewController.swift */; };
 		300D3D931AF9DE3300170296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300D3D911AF9DE3300170296 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		2A5E9E2D1FBC8ABA00313197 /* Dic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dic.swift; sourceTree = "<group>"; };
 		2A84FBC71FB3211200F3E533 /* ReceptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceptionTableViewController.swift; sourceTree = "<group>"; };
 		2AB0EE311FA867900020046F /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		2AF444451FBD8E8600532A81 /* ReceptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceptionController.swift; sourceTree = "<group>"; };
 		300BD2B71AFB0CD700797BE1 /* SwiftSample.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = SwiftSample.sh; sourceTree = "<group>"; };
 		300D3D881AF9DE3300170296 /* MFB_IOS_PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFB_IOS_PROJECT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		300D3D8C1AF9DE3300170296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +121,22 @@
 			name = JsonApi;
 			sourceTree = "<group>";
 		};
+		2AF444431FBD8E4C00532A81 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				2AF444441FBD8E5500532A81 /* Reception */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		2AF444441FBD8E5500532A81 /* Reception */ = {
+			isa = PBXGroup;
+			children = (
+				2AF444451FBD8E8600532A81 /* ReceptionController.swift */,
+			);
+			name = Reception;
+			sourceTree = "<group>";
+		};
 		300D3D7F1AF9DE3300170296 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +164,7 @@
 		300D3D8A1AF9DE3300170296 /* MFB_IOS_PROJECT */ = {
 			isa = PBXGroup;
 			children = (
+				2AF444431FBD8E4C00532A81 /* Tasks */,
 				2A5E9E271FBC8A4C00313197 /* JsonApi */,
 				2A5E9E241FBC89E000313197 /* BackEnd */,
 				2A5E9E1F1FBC895500313197 /* Entity */,
@@ -436,6 +455,7 @@
 				2A5E9E291FBC8A5B00313197 /* JsonApiCollection.swift in Sources */,
 				2A5E9E231FBC89A900313197 /* Product.swift in Sources */,
 				300D3D901AF9DE3300170296 /* ViewController.swift in Sources */,
+				2AF444461FBD8E8600532A81 /* ReceptionController.swift in Sources */,
 				2A5E9E211FBC896B00313197 /* Entity.swift in Sources */,
 				2AB0EE321FA867900020046F /* Stock.swift in Sources */,
 				2A5E9E2E1FBC8ABA00313197 /* Dic.swift in Sources */,

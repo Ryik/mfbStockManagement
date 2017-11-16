@@ -12,9 +12,11 @@ import SwiftyJSON
 
 class Ressource {
     var article: String!
-    var qtity: Int?
-    var colisage: Int?
-    var pckgPerLevel: Int?
+    var qtity: Int! = 0
+    var colisage: Int! = 0
+    var pckgPerLevel: Int! = 0
+    var level : Int! = 0
+    var surplus: Int! = 0
     var owner: String!
     var date: Date!
     var code : Captuvo!

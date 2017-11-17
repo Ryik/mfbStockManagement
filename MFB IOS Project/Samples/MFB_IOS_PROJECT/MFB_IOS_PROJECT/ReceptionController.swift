@@ -104,7 +104,7 @@ class ReceptionController : FormViewController, ReceptionTableViewControllerDele
     // FIXME :- NEED TO ADD CAPTUVO FEATURE
     func validationTapped(cell : ButtonCellOf<String>, row: ButtonRow) {
         if (product.article == nil || product.colisage == 0 || product.level == 0 || product.owner == nil || product.pckgPerLevel == 0) {
-            let alert = UIAlertController(title: "Enregistrer la réception", message: "Remplissez tous les champs.", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Enregistrement de la réception", message: "Remplissez tous les champs.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }

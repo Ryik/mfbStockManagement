@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import Alamofire
 import Eureka
+import SwiftyJSON
 
 class ReceptionController : FormViewController, ReceptionTableViewControllerDelegate, OrganisationTableViewControllerDelegate {
     func addItemOrganisationControllerDidCancel(controller: OrganisationTableViewController) {
@@ -70,6 +72,7 @@ class ReceptionController : FormViewController, ReceptionTableViewControllerDele
         form +++ Section("Liste déroulante")
             <<< TextRow() { row in
                 row.title = "                       Aucun article choisi"
+                row.disabled = true
                 refreshingProductName = row
             }
             <<< ButtonRow() { button in
@@ -78,6 +81,7 @@ class ReceptionController : FormViewController, ReceptionTableViewControllerDele
             }
             <<< TextRow() { row in
                 row.title = "                  Aucun propriétaire choisi"
+                row.disabled = true
                 refreshingOwner = row
             }
             <<< ButtonRow() { button in
@@ -90,9 +94,28 @@ class ReceptionController : FormViewController, ReceptionTableViewControllerDele
                 row.value = Date(timeIntervalSinceReferenceDate: 0)
         }
         
-        
-        // A FAIRE QUAND ON VALIDE LA RECEPTION
-        // product.qtity = product.colisage * product.pckgPerLevel * product.level + product.surplus
+        form +++ Section("Validation de la réception")
+            <<< ButtonRow() { button in
+                button.title = "Enregistrer la réception"
+                button.onCellSelection(self.validationTapped)
+                
+        }
+    }
+    // FIXME :- NEED TO ADD CAPTUVO FEATURE
+    func validationTapped(cell : ButtonCellOf<String>, row: ButtonRow) {
+        if (product.article == nil || product.colisage == 0 || product.level == 0 || product.owner == nil || product.pckgPerLevel == 0) {
+            let alert = UIAlertController(title: "Enregistrer la réception", message: "Remplissez tous les champs.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else {
+            product.qtity = product.colisage * product.pckgPerLevel * product.level + product.surplus
+            let attributes : JSON = JSON(["name" : product.article, "owner" : product.owner])
+            let post : JsonApiInstance = JsonApiInstance(id: nil, attributes: attributes, type: "products")
+            Alamofire.request(ProductRouter.post(post.json.object as! [String : Any])).responseJSON { request in
+                print(request)
+            }
+        }
     }
     
     func actingSegues(cell : ButtonCellOf<String> ,row: ButtonRow) {

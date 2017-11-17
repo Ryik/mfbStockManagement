@@ -123,6 +123,15 @@
 			name = JsonApi;
 			sourceTree = "<group>";
 		};
+		2AE5403E1FBED72E007D2E31 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				2A84FBC71FB3211200F3E533 /* ReceptionTableViewController.swift */,
+				2AE5403C1FBEC78A007D2E31 /* OrganisationTableViewController.swift */,
+			);
+			name = TableViews;
+			sourceTree = "<group>";
+		};
 		2AF444431FBD8E4C00532A81 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,12 +175,11 @@
 		300D3D8A1AF9DE3300170296 /* MFB_IOS_PROJECT */ = {
 			isa = PBXGroup;
 			children = (
+				2AE5403E1FBED72E007D2E31 /* TableViews */,
 				2AF444431FBD8E4C00532A81 /* Tasks */,
 				2A5E9E271FBC8A4C00313197 /* JsonApi */,
 				2A5E9E241FBC89E000313197 /* BackEnd */,
 				2A5E9E1F1FBC895500313197 /* Entity */,
-				2A84FBC71FB3211200F3E533 /* ReceptionTableViewController.swift */,
-				2AE5403C1FBEC78A007D2E31 /* OrganisationTableViewController.swift */,
 				300D3D8D1AF9DE3300170296 /* AppDelegate.swift */,
 				300D3D8F1AF9DE3300170296 /* ViewController.swift */,
 				300D3D911AF9DE3300170296 /* Main.storyboard */,

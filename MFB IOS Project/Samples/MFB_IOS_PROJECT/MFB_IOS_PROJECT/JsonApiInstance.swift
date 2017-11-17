@@ -27,7 +27,6 @@ class JsonApiInstance {
     
     static func create_from_entity(entity: Entity) -> JsonApiInstance {
         return JsonApiInstance(id: entity.id, attributes: entity.attributes , type: JSON(type(of: entity).json_api_type))
-        
     }
     
     func create_entity() -> Entity {

@@ -11,22 +11,30 @@ import Alamofire
 
 
 enum ProductRouter: URLRequestConvertible {
-    static let baseURLString = "http://localhost:3000"
+    static let baseURLString = "http://localhost:3000/"
     
-    case get
+    
+    
+    case getProducts
+    case getOrganisations
+    case post([String : Any])
     
     func asURLRequest() throws -> URLRequest {
         var method: HTTPMethod {
             switch self {
-            case .get:
+            case .getProducts, .getOrganisations:
                 return .get
+            case .post:
+                return .post
             }
         }
         
         let params: ([String: Any]?) = {
             switch self {
-            case .get:
+            case .getProducts, .getOrganisations:
                 return nil
+            case .post(let newEntity):
+                return (newEntity)
             }
         }()
         
@@ -34,8 +42,12 @@ enum ProductRouter: URLRequestConvertible {
             // build up and return the URL for each endpoint
             let relativePath: String?
             switch self {
-            case .get:
+            case .getProducts:
                 relativePath = "products"
+            case .getOrganisations:
+                relativePath = "organisations"
+            case .post:
+                relativePath = "shipment_receipts"
             }
             
             var url = URL(string: ProductRouter.baseURLString)!
@@ -52,6 +64,8 @@ enum ProductRouter: URLRequestConvertible {
             switch method {
             case .get:
                 return URLEncoding.default
+            case .post:
+                return JSONEncoding.default
             default:
                 return JSONEncoding.default
             }

@@ -48,11 +48,53 @@
                     <navigationItem key="navigationItem" title="Réception de marchandises" id="naM-KB-WkH"/>
                     <connections>
                         <segue destination="wSj-3K-gT8" kind="show" identifier="ArticleSegue" id="Ri9-dp-h01"/>
+                        <segue destination="ozn-E2-VRn" kind="show" identifier="PropriétaireSegue" id="D7S-fB-g36"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLa-PI-UkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="214"/>
+            <point key="canvasLocation" x="-225" y="-555"/>
+        </scene>
+        <!--Organisation Table View Controller-->
+        <scene sceneID="N65-ri-VXc">
+            <objects>
+                <tableViewController id="ozn-E2-VRn" customClass="OrganisationTableViewController" customModule="MFB_IOS_PROJECT" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="w2H-j0-MXP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="53" id="y50-GK-PQZ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="53"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y50-GK-PQZ" id="5NS-cv-fA5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="52.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsE-mg-3Xf">
+                                            <rect key="frame" x="27" y="12" width="84" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ozn-E2-VRn" id="3wA-gb-ntG"/>
+                            <outlet property="delegate" destination="ozn-E2-VRn" id="9XU-cd-sjW"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="OrganisationTableView" destination="w2H-j0-MXP" id="ciM-BU-zhe"/>
+                        <segue destination="slK-mj-d7A" kind="show" identifier="OrganisationChoosedSegue" id="wNT-o3-kFJ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tv3-yi-tjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="574" y="-901"/>
         </scene>
         <!--Choose your product-->
         <scene sceneID="OLs-3U-R8o">
@@ -92,7 +134,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sP-BP-23v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="-554"/>
+            <point key="canvasLocation" x="574" y="-179"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dtq-cs-Er5">
@@ -147,11 +189,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KG8-0U-Fc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35.200000000000003" y="213.19340329835083"/>
+            <point key="canvasLocation" x="-932" y="-555"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ri9-dp-h01"/>
-        <segue reference="AJQ-co-obN"/>
+        <segue reference="wNT-o3-kFJ"/>
     </inferredMetricsTieBreakers>
 </document>

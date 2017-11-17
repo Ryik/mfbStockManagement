@@ -11,23 +11,23 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-protocol ReceptionTableViewControllerDelegate: class {
-    func addItemReceptionControllerDidCancel(controller : ReceptionTableViewController)
-    func addItemReceptionController(controller: ReceptionTableViewController, didFinishingdAdding item: String)
+protocol OrganisationTableViewControllerDelegate: class {
+    func addItemOrganisationControllerDidCancel(controller : OrganisationTableViewController)
+    func addItemOrganisationController(controller: OrganisationTableViewController, didFinishingdAdding item: String)
 }
 
-class ReceptionTableViewController: UITableViewController  {
+class OrganisationTableViewController: UITableViewController  {
     
-    weak var delegate : ReceptionTableViewControllerDelegate?
-
-    @IBOutlet var ProductTableView: UITableView!
+    weak var delegate : OrganisationTableViewControllerDelegate?
+    
+    @IBOutlet var OrganisationTableView: UITableView!
     
     
     let searchController = UISearchController(searchResultsController: nil)
-    var productName = [String]()
-    var filteredProductName = [String]()
-
-
+    var organisationName = [String]()
+    var filteredOrganisationName = [String]()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +36,12 @@ class ReceptionTableViewController: UITableViewController  {
         // Setup the Search Controller
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search product name"
+        searchController.searchBar.placeholder = "Search organisation name"
         navigationItem.searchController = searchController
         definesPresentationContext = true
         
         
-        Alamofire.request(ProductRouter.getProducts).responseJSON { response in
+        Alamofire.request(ProductRouter.getOrganisations).responseJSON { response in
             // check for errors
             guard response.result.error == nil else {
                 // got an error in getting the data, need to handle it
@@ -49,74 +49,74 @@ class ReceptionTableViewController: UITableViewController  {
                 print(response.result.error!)
                 return
             }
-
+            
             // make sure we got some JSON since that's what we expect
             guard let json = JSON(response.result.value) as? JSON else {
-                print("didn't get products object as JSON from API")
+                print("didn't get organisations object as JSON from API")
                 print("Error: \(String(describing:response.result.error))")
                 return
             }
-
+            
             // get and print the title
-            guard let products = json["data"] as? JSON else {
-                print("Could not get products from JSON")
+            guard let organisations = json["data"] as? JSON else {
+                print("Could not get organisation from JSON")
                 return
             }
             var i = 0
-            while (products[i] != JSON.null) {
-                self.productName.append(products[i]["attributes"]["name"].string!)
+            while (organisations[i] != JSON.null) {
+                self.organisationName.append(organisations[i]["attributes"]["name"].string!)
                 i = i + 1
             }
-
-            self.ProductTableView.reloadData()
+            
+            self.OrganisationTableView.reloadData()
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering() {
-            return filteredProductName.count
+            return filteredOrganisationName.count
         }
         
-        return productName.count
+        return organisationName.count
     }
-
-
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let name: String
         if isFiltering() {
-            name = filteredProductName[indexPath.row]
+            name = filteredOrganisationName[indexPath.row]
         } else {
-            name = productName[indexPath.row]
+            name = organisationName[indexPath.row]
         }
         cell.textLabel!.text = name
         return cell
     }
     // MARK: - Search Bar
     
-
+    
     
     func searchBarIsEmpty() -> Bool {
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        filteredProductName = productName.filter({( name : String) -> Bool in
+        filteredOrganisationName = organisationName.filter({( name : String) -> Bool in
             return name.lowercased().contains(searchText.lowercased())
         })
         
-        self.ProductTableView.reloadData()
+        self.OrganisationTableView.reloadData()
     }
     
     func isFiltering() -> Bool {
@@ -126,23 +126,24 @@ class ReceptionTableViewController: UITableViewController  {
     // MARK :- Click on cell
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var name: String = productName[indexPath.row]
+        var name: String = organisationName[indexPath.row]
         if isFiltering() {
-            name = filteredProductName[indexPath.row]
+            name = filteredOrganisationName[indexPath.row]
         }
-        delegate?.addItemReceptionController(controller: self, didFinishingdAdding: name)
+        delegate?.addItemOrganisationController(controller: self, didFinishingdAdding: name)
         navigationController?.popViewController(animated: true)
         
     }
 }
 
 
-extension ReceptionTableViewController: UISearchResultsUpdating {
+extension OrganisationTableViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
     }
 }
+
 
 
 

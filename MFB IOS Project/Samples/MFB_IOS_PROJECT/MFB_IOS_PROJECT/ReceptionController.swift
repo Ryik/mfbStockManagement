@@ -9,7 +9,16 @@
 import UIKit
 import Eureka
 
-class ReceptionController : FormViewController, ReceptionTableViewControllerDelegate {
+class ReceptionController : FormViewController, ReceptionTableViewControllerDelegate, OrganisationTableViewControllerDelegate {
+    func addItemOrganisationControllerDidCancel(controller: OrganisationTableViewController) {
+    }
+    
+    func addItemOrganisationController(controller: OrganisationTableViewController, didFinishingdAdding item: String) {
+        product.owner = item
+        refreshingOwner?.title = item
+        refreshingOwner?.reload()
+    }
+    
     
     func addItemReceptionControllerDidCancel(controller: ReceptionTableViewController) {
     }
@@ -94,6 +103,10 @@ class ReceptionController : FormViewController, ReceptionTableViewControllerDele
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ArticleSegue") {
             let controller = segue.destination as! ReceptionTableViewController
+            controller.delegate = self
+        }
+        if (segue.identifier == "PropriétaireSegue") {
+            let controller = segue.destination as! OrganisationTableViewController
             controller.delegate = self
         }
     }

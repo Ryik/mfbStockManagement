@@ -20,12 +20,13 @@ class BackEnd {
         
         
         case getProducts
+        case getOrganisations
         case post([String : Any])
         
         func asURLRequest() throws -> URLRequest {
             var method: HTTPMethod {
                 switch self {
-                case .getProducts:
+                case .getProducts, .getOrganisations:
                     return .get
                 case .post:
                     return .post
@@ -34,7 +35,7 @@ class BackEnd {
             
             let params: ([String: Any]?) = {
                 switch self {
-                case .getProducts:
+                case .getProducts, .getOrganisations:
                     return nil
                 case .post(let newEntity):
                     return (newEntity)
@@ -47,6 +48,8 @@ class BackEnd {
                 switch self {
                 case .getProducts:
                     relativePath = "products"
+                case .getOrganisations:
+                    relativePath = "organisations"
                 case .post:
                     relativePath = "shipment_receipts"
                 }
@@ -74,6 +77,7 @@ class BackEnd {
             return try encoding.encode(urlRequest, with: params)
         }
     }
+
     
     func post_record(parameters : JsonApiInstance) {
         Alamofire.request(ProductRouter.post(parameters.json.object as! [String : Any])).responseJSON { request in
